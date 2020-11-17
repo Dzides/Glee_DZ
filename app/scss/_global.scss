@@ -15,15 +15,27 @@ body {
     flex-grow: 1;
 }
 
+.wrapper{
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-a{
-    font-size: 14px;
-    line-height: 32px;
-    color: #7b7b7b;
-    @extend %rubic-400;
+// a{
+//     font-size: 14px;
+//     line-height: 32px;
+//     color: #7b7b7b;
+//     @extend %rubic-400;
+// }
+
+button {
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
 }

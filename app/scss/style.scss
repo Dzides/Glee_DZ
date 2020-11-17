@@ -3,8 +3,90 @@
 @import 'reset';
 @import 'global';
 
+.header {
+    padding: 50px 0;
 
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    margin-bottom: 10px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item a {
+        @extend %rubic-500;
+        font-size: 15px;
+        color: #436372;
+    }
+
+    &__item+&__item {
+        padding-left: 35px;
+    }
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__link{
+        position: relative;
+    }
+
+    &__search {
+        margin-right: 21px;
+        width: 51px;
+        height: 51px;
+        background-color: #edf1f4;
+        border-radius: 50%;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    &__shop {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 178px;
+        height: 51px;
+        padding: 0 14px;
+        margin-right: 18px;
+        background-color: #fcd7b6;
+        border-radius: 25px;
+    }
+    &__num{
+        position: absolute;
+        top: -7px;
+        left: 11px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: white;
+        text-align: center;
+        line-height: 16px;
+    }
+    &__cubic {
+        width: 51px;
+        height: 51px;
+        background-color: #edf1f4;
+        border-radius: 50%;
+        img{
+            margin: 0 auto;
+        }
+    }
+}
 
 
 @import 'media';
-
