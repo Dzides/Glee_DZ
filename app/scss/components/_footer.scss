@@ -15,12 +15,13 @@
         width: 100%;
         padding-right: 100px;
         padding-top: 17px;
-
-        p {
-            margin-bottom: 32px;
-            line-height: 1.7;
-        }
     }
+
+    &__text {
+        margin-bottom: 32px;
+        line-height: 1.7;
+    }
+
 
     &__column--first {
         padding-top: 0;
@@ -37,11 +38,12 @@
         margin-bottom: 10px;
         line-height: 1.8;
         color: $grey;
-
-        span {
-            text-transform: uppercase;
-        }
     }
+
+    &__upper {
+        text-transform: uppercase;
+    }
+
 
     &__column--last {
         max-width: 270px;
