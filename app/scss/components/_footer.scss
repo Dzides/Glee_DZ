@@ -1,0 +1,125 @@
+.footer {
+    @extend %rubic-400;
+    background-color: white;
+    color: $grey;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 0 61px;
+        border-bottom: 1px solid #dae4e9;
+    }
+
+    &__column {
+        max-width: 300px;
+        width: 100%;
+        padding-right: 100px;
+        padding-top: 17px;
+
+        p {
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+    }
+
+    &__column--first {
+        padding-top: 0;
+        padding-right: 80px;
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    &__address {
+        display: inline-block;
+        margin-bottom: 10px;
+        line-height: 1.8;
+        color: $grey;
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+
+    &__column--last {
+        max-width: 270px;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    &__title {
+        @extend %dmsans-700;
+        font-size: 16px;
+        color: $dark-blue;
+        text-transform: uppercase;
+        margin-bottom: 21px;
+    }
+
+    &__link {
+        color: $grey;
+    }
+
+    &__item {
+        margin-bottom: 14px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        @extend %dmsans-400;
+
+    }
+
+    &__input {
+        padding: 0 15px;
+        max-width: 170px;
+        min-height: 38px;
+        width: 100%;
+        font-size: 12px;
+        line-height: 1;
+        background-color: $vl-brown;
+        color: $med-blue;
+    }
+
+    &__btn {
+        border: none;
+        padding: 0 16px;
+        max-width: 100px;
+        width: 100%;
+        min-height: 38px;
+        line-height: 1;
+        background-color: $ml-blue;
+        color: white;
+        cursor: pointer;
+    }
+
+    &__bottom {
+        min-height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list--bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item--bottom {
+        margin-left: 31px;
+        margin-bottom: 0;
+        position: relative;
+
+        &:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            background-color: #7b7b7b;
+            width: 1px;
+            height: 17px;
+            top: 0;
+            right: -16px;
+        }
+    }
+}

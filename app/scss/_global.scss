@@ -5,10 +5,10 @@ body {
 
 body {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.3;
     background-color: white;
-    @extend %rubic-500;
-    color: #7b7b7b;
+    @extend %dmsans-700;
+    color: $dark-grey;
     display: flex;
     flex-direction: column;
 }
@@ -29,16 +29,5 @@ body {
     padding: 0 15px;
 }
 
-a {
-    font-size: 14px;
-    line-height: 32px;
-    color: #7b7b7b;
-    @extend %rubic-400;
-}
 
-button {
-    margin: 0;
-    border: none;
-    background-color: transparent;
-}
 

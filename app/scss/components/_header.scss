@@ -1,0 +1,108 @@
+.header {
+    padding: 50px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    margin-bottom: 10px;
+    @extend %rubic-500;
+    font-size: 15px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        &+& {
+            margin-left: 30px
+        }
+    }
+
+    &__link {
+        font-size: 15px;
+        line-height: 1;
+        color: $md-blue;
+    }
+
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__link {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__link--search {
+        width: 51px;
+        height: 51px;
+        margin-right: 21px;
+        background-color: $vr-blue;
+        background-image: url(../images/icon/search.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 50%;
+    }
+
+    &__shop {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 178px;
+        height: 51px;
+        padding: 0 14px;
+        margin-right: 18px;
+        background-color: $vl-orange;
+        border-radius: 25px;
+
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__link--heart::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 32px;
+        top: -9px;
+        right: -30px;
+        background-color: #fde7d3;
+    }
+
+    &__num {
+        position: absolute;
+        top: -7px;
+        left: 11px;
+        width: 16px;
+        height: 16px;
+        font-size: 15px;
+        line-height: 16px;
+        text-align: center;
+        color: $ds-blue;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    &__link--cubic {
+        width: 51px;
+        height: 51px;
+        background-color: $ml-blue;
+        background-image: url(../images/icon/cubic.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 50%;
+    }
+}

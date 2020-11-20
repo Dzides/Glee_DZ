@@ -2,8 +2,7 @@
     font-family: "DMSans-Regular";
     font-weight: 400;
     font-style: normal;
-    src: local('DMSans-Regular'),
-        url("../fonts/DMSans-Regular.woff2") format("woff2"),
+    src: url("../fonts/DMSans-Regular.woff2") format("woff2"),
         url("../fonts/DMSans-Regular.woff") format("woff");
     font-display: swap;
 }
@@ -12,8 +11,7 @@
     font-family: "DMSans-Medium";
     font-weight: 500;
     font-style: normal;
-    src: local('DMSans-Medium'),
-        url("../fonts/DMSans-Medium.woff2") format("woff2"),
+    src: url("../fonts/DMSans-Medium.woff2") format("woff2"),
         url("../fonts/DMSans-Medium.woff") format("woff");
     font-display: swap;
 }
@@ -22,8 +20,7 @@
     font-family: "DMSans-Bold";
     font-weight: 700;
     font-style: normal;
-    src: local('DMSans-Bold'),
-        url("../fonts/DMSans-Bold.woff2") format("woff2"),
+    src: url("../fonts/DMSans-Bold.woff2") format("woff2"),
         url("../fonts/DMSans-Bold.woff") format("woff");
     font-display: swap;
 }
@@ -33,8 +30,7 @@
     font-family: "Rubik-Regular";
     font-weight: 400;
     font-style: normal;
-    src: local('Rubik-Regular'),
-        url("../fonts/Rubik-Regular.woff2") format("woff2"),
+    src: url("../fonts/Rubik-Regular.woff2") format("woff2"),
         url("../fonts/Rubik-Regular.woff") format("woff");
     font-display: swap;
 }
@@ -43,8 +39,7 @@
     font-family: "Rubik-Medium";
     font-weight: 500;
     font-style: normal;
-    src: local('Rubik-Medium'),
-        url("../fonts/Rubik-Medium.woff2") format("woff2"),
+    src: url("../fonts/Rubik-Medium.woff2") format("woff2"),
         url("../fonts/Rubik-Medium.woff") format("woff");
     font-display: swap;
 }
@@ -53,8 +48,7 @@
     font-family: "MyriadProRegular";
     font-weight: 400;
     font-style: normal;
-    src: local('MyriadProRegular'),
-        url("../fonts/MyriadProRegular.woff2") format("woff2"),
+    src: url("../fonts/MyriadProRegular.woff2") format("woff2"),
         url("../fonts/MyriadProRegular.woff") format("woff");
     font-display: swap;
 }
@@ -63,8 +57,7 @@
     font-family: "Poppins-Bold";
     font-weight: 700;
     font-style: normal;
-    src: local('Poppins-Bold'),
-        url("../fonts/Poppins-Bold.woff2") format("woff2"),
+    src: url("../fonts/Poppins-Bold.woff2") format("woff2"),
         url("../fonts/Poppins-Bold.woff") format("woff");
     font-display: swap;
 }
