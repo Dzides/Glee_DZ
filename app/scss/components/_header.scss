@@ -1,5 +1,5 @@
 .header {
-    padding: 50px 0;
+    padding: 50px 0 43px;
 
     &__inner {
         display: flex;
@@ -79,7 +79,7 @@
         height: 32px;
         top: -9px;
         right: -30px;
-        background-color: #fde7d3;
+        background-color: $light-orange;
     }
 
     &__num {
@@ -88,7 +88,7 @@
         left: 11px;
         width: 16px;
         height: 16px;
-        font-size: 15px;
+        font-size: 12px;
         line-height: 16px;
         text-align: center;
         color: $ds-blue;

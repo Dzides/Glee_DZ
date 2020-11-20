@@ -1,0 +1,153 @@
+.slider {
+
+    &__wrapper {
+        padding: 100px 0 25px;
+        background-color: $vl-orange;
+    }
+
+    &__container {
+        max-width: 1460px;
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: center;
+    }
+
+    &__content {
+        max-width: 500px;
+        padding-right: 70px;
+        margin-top: 115px;
+        margin-right: 30px;
+        @extend %rubic-500;
+    }
+
+    &__title {
+        margin-bottom: 22px;
+        font-size: 72px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $ds-blue;
+    }
+
+    &__text {
+        margin-bottom: 55px;
+        @extend %rubic-400;
+        font-size: 18px;
+        line-height: 1.7;
+        color: $md-blue;
+    }
+
+    &__link {
+        position: relative;
+        padding: 22px 100px 25px 25px;
+        font-size: 15px;
+        color: white;
+        background-color: $ml-blue;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 10px;
+            top: 26px;
+            right: 21px;
+            background-image: url(../images/shop_go.png)
+        }
+    }
+
+    &__img {
+        position: relative;
+        padding-top: 178px;
+        padding-bottom: 204px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 634px;
+            height: 634px;
+            top: 0;
+            right: -114px;
+            border-radius: 50%;
+            background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 31.64%, rgba(255, 255, 255, 0.222586) 74.35%, rgba(255, 255, 255, 0) 99.87%);
+            z-index: -1;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+
+        li {
+            button {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+                background-color: $vls-orange;
+                color: $shade-blue;
+                border-radius: 50%;
+                margin-right: 11px;
+                margin-bottom: 20px;
+                transition: background-color 0.3s, color 0.3s;
+
+                &:hover {
+                    background-color: white;
+                    color: $ds-blue;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+.slider-board {
+    padding: 45px 130px 35px 150px;
+    background-color: $slb-orange;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 1;
+        color: $mds-grey;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        @extend %dmsans-400;
+        font-size: 16px;
+        line-height: 1.9;
+        color: $medium-grey;
+    }
+
+    &__info {
+        max-width: 230px;
+    }
+
+    &__info--sup {
+        max-width: 200px;
+        margin-left: 20px;
+    }
+
+    &__info--ship {
+        margin-left: 30px;
+    }
+
+    &__info--pay {
+        margin-left: 40px;
+    }
+}
