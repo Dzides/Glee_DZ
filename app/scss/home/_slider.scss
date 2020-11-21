@@ -118,6 +118,10 @@
     &__item {
         display: flex;
         align-items: flex-start;
+
+        svg {
+            z-index: 1;
+        }
     }
 
     &__title {
@@ -135,19 +139,38 @@
     }
 
     &__info {
+        position: relative;
         max-width: 230px;
     }
 
     &__info--sup {
         max-width: 200px;
         margin-left: 20px;
+
+        &::before {
+            @include slider-before;
+            top: 34px;
+            left: -40px;
+        }
     }
 
     &__info--ship {
         margin-left: 30px;
+
+        &::before {
+            @include slider-before;
+            top: 17px;
+            left: -43px;
+        }
     }
 
     &__info--pay {
         margin-left: 40px;
+
+        &::before {
+            @include slider-before;
+            top: 34px;
+            left: -56px;
+        }
     }
 }
