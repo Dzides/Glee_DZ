@@ -148,7 +148,7 @@
         margin-left: 20px;
 
         &::before {
-            @include slider-before;
+            @extend %slider-before;
             top: 34px;
             left: -40px;
         }
@@ -158,7 +158,7 @@
         margin-left: 30px;
 
         &::before {
-            @include slider-before;
+            @extend %slider-before;
             top: 17px;
             left: -43px;
         }
@@ -168,7 +168,7 @@
         margin-left: 40px;
 
         &::before {
-            @include slider-before;
+            @extend %slider-before;
             top: 34px;
             left: -56px;
         }

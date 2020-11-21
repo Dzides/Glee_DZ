@@ -19,7 +19,7 @@ $mds-grey: #414141;
 $medium-grey: #585858;
 $light-grey: #dfe3e2;
 
-@mixin slider-before {
+%slider-before {
         content: '';
         position: absolute;
         width: 20px;
@@ -61,4 +61,12 @@ $light-grey: #dfe3e2;
 %poppins-700 {
     font-family: "Poppins-Bold", sans-serif;
     font-weight: 700;
+}
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
 }
