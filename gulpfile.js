@@ -6,6 +6,7 @@ const autoPrefixer         = require('gulp-autoprefixer');
 const uglify               = require('gulp-uglify');
 const imagemin             = require('gulp-imagemin');
 const del                  = require('del');
+var sassGlob               = require('gulp-sass-glob');
 const browserSync          = require('browser-sync').create();
 
 
@@ -20,14 +21,14 @@ function browsersync() {
 
 function styles() {
     return src('app/scss/style.scss')
-
-    .pipe(scss({outputStyle: 'expanded'}))
-    .pipe(concat('style.css'))
-    .pipe(autoPrefixer({
-    }))
-    .pipe(dest('app/css'))
-
     .pipe(scss({outputStyle: 'compressed'}))
+    .pipe(sassGlob({
+        ignorePaths: [
+            '**/_f1.scss',
+            'recursive/*.scss',
+            'import/**'
+        ]
+    }))
     .pipe(concat('style.min.css'))
     .pipe(autoPrefixer({
         overrideBrowserslist: ['last 10 version'],

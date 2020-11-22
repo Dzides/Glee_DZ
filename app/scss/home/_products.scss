@@ -1,0 +1,120 @@
+.products {
+    padding: 66px 0 80px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__filter {
+        margin-bottom: 80px;
+    }
+
+    &__btn {
+        margin: 0 6px;
+        font-size: 16px;
+        color: $grey;
+
+        &:hover,
+        &:active {
+            color: $dark-grey;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 45px 30px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 30px 0 30px;
+        max-width: 270px;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    }
+
+    &__inner {
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            cursor: pointer;
+
+            .products__choice {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        margin: 0 auto 60px;
+        z-index: -1;
+    }
+
+    &__choice {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 80px;
+        transform: translateY(500%);
+        transition: transform 0.5s;
+    }
+
+    &__link {
+        position: relative;
+
+        &+& {
+            margin-left: 30px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            width: 46px;
+            height: 46px;
+            top: -18px;
+            left: -12px;
+            border-radius: 50%;
+            background-color: white;
+            z-index: -1;
+            transition: background-color 0.3s;
+        }
+
+        &:hover:before {
+            background-color: $ml-blue;
+        }
+
+        path {
+            transition: fill 0.3s;
+        }
+
+        &:hover {
+            path {
+                fill: white;
+            }
+        }
+    }
+
+    &__info {
+        font-size: 16px;
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+        @extend %dmsans-500;
+        color: $ds-blue;
+    }
+
+    &__price {
+        color: $ml-blue;
+    }
+}
+
+.title {
+    font-size: 36px;
+}
