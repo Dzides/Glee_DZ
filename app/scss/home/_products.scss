@@ -2,26 +2,7 @@
     padding: 66px 0 80px;
     text-align: center;
 
-    &__title {
-        margin-bottom: 25px;
-    }
-
-    &__filter {
-        margin-bottom: 80px;
-    }
-
-    &__btn {
-        margin: 0 6px;
-        font-size: 16px;
-        color: $grey;
-
-        &:hover,
-        &:active {
-            color: $dark-grey;
-        }
-    }
-
-    &__cards {
+         &__cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 45px 30px;
