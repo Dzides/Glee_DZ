@@ -1,4 +1,4 @@
-.slider {
+.slider-main {
 
     &__wrapper {
         padding: 100px 0 25px;
@@ -82,7 +82,7 @@
             button {
                 width: 30px;
                 height: 30px;
-                font-size: 12px;
+                font-size: 15px;
                 background-color: $vls-orange;
                 color: $shade-blue;
                 border-radius: 50%;
@@ -103,74 +103,5 @@
             }
         }
     }
-}
 
-.slider-board {
-    padding: 45px 130px 35px 150px;
-    background-color: $slb-orange;
-
-    &__items {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__item {
-        display: flex;
-        align-items: flex-start;
-
-        svg {
-            z-index: 1;
-        }
-    }
-
-    &__title {
-        font-size: 18px;
-        line-height: 1;
-        color: $mds-grey;
-        margin-bottom: 8px;
-    }
-
-    &__text {
-        @extend %dmsans-400;
-        font-size: 16px;
-        line-height: 1.9;
-        color: $medium-grey;
-    }
-
-    &__info {
-        position: relative;
-        max-width: 230px;
-    }
-
-    &__info--sup {
-        max-width: 200px;
-        margin-left: 20px;
-
-        &::before {
-            @extend %slider-before;
-            top: 34px;
-            left: -40px;
-        }
-    }
-
-    &__info--ship {
-        margin-left: 30px;
-
-        &::before {
-            @extend %slider-before;
-            top: 17px;
-            left: -43px;
-        }
-    }
-
-    &__info--pay {
-        margin-left: 40px;
-
-        &::before {
-            @extend %slider-before;
-            top: 34px;
-            left: -56px;
-        }
-    }
 }

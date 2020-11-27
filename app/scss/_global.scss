@@ -13,6 +13,10 @@ body {
     flex-direction: column;
 }
 
+.logo {
+    font-size: 0;
+}
+
 .main {
     flex-grow: 1;
 }
@@ -24,9 +28,8 @@ body {
 }
 
 .container {
+    @extend .wrapper;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
 }
 
 .title {
@@ -39,14 +42,19 @@ body {
 }
 
 .btn {
-    margin: 0 6px;
+    margin: 0 14px;
     font-size: 16px;
     color: $grey;
 
-    &:hover,
+    &:focus {
+        color: $medium-grey;
+    }
+
+    &:hover {
+        color: $mini-grey;
+    }
+
     &:active {
         color: $dark-grey;
     }
 }
-
-

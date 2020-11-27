@@ -15,6 +15,17 @@
         width: 100%;
         padding-right: 100px;
         padding-top: 17px;
+
+        &--first {
+            padding-top: 0;
+            padding-right: 80px;
+        }
+
+        &--last {
+            max-width: 270px;
+            width: 100%;
+            padding-right: 0;
+        }
     }
 
     &__text {
@@ -22,33 +33,9 @@
         line-height: 1.7;
     }
 
-
-    &__column--first {
-        padding-top: 0;
-        padding-right: 80px;
-    }
-
     &__logo {
         display: block;
         margin-bottom: 24px;
-    }
-
-    &__address {
-        display: inline-block;
-        margin-bottom: 10px;
-        line-height: 1.8;
-        color: $grey;
-    }
-
-    &__upper {
-        text-transform: uppercase;
-    }
-
-
-    &__column--last {
-        max-width: 270px;
-        width: 100%;
-        padding-right: 0;
     }
 
     &__title {
@@ -72,6 +59,10 @@
         justify-content: center;
         @extend %dmsans-400;
 
+    }
+
+    &__plac {
+        font-size: 0;
     }
 
     &__input {
@@ -123,4 +114,18 @@
             right: -16px;
         }
     }
+
+    .address {
+        &__link {
+            display: inline-block;
+            margin-bottom: 10px;
+            line-height: 1.8;
+            color: $grey;
+        }
+
+        &__upper {
+            text-transform: uppercase;
+        }
+    }
+    
 }

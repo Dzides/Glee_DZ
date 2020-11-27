@@ -1,0 +1,91 @@
+.board {
+
+    &__wrapper {
+        background-color: $slb-orange;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px 130px;
+
+        &--left {
+            border-left: 1px solid $mini-grey;
+        }
+
+        &--right {
+            border-right: 1px solid $mini-grey;
+        }
+
+        svg {
+            z-index: 1;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 1;
+        color: $mds-grey;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        @extend %dmsans-400;
+        font-size: 16px;
+        line-height: 1.9;
+        color: $medium-grey;
+    }
+
+    &__link {
+        @extend %invisible;
+    }
+
+    &__info {
+        position: relative;
+        max-width: 230px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: $light-grey;
+            border-radius: 50%;
+        }
+
+        &--sup {
+            max-width: 200px;
+            margin-left: 20px;
+
+            &::before {
+                top: 34px;
+                left: -40px;
+            }
+        }
+
+        &--ship {
+            margin-left: 30px;
+
+            &::before {
+                top: 17px;
+                left: -43px;
+            }
+        }
+
+        &--pay {
+            margin-left: 40px;
+
+            &::before {
+                top: 34px;
+                left: -56px;
+            }
+        }
+    }
+
+}

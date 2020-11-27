@@ -17,20 +17,11 @@ $light-brown: #feefe2;
 $dark-grey: #191919;
 $grey: #7b7b7b;
 $light-grey: #b3b7b5;
-
+$mini-grey: #e8e4df;
 $mds-grey: #414141;
 $medium-grey: #585858;
-$light-grey: #dfe3e2;
 $min-grey: #f8f8f8;
 
-%slider-before {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background-color: $light-grey;
-        border-radius: 50%;
-  }
 
 %dmsans-400 {
     font-family: "DMSans-Regular", sans-serif;
@@ -73,4 +64,17 @@ $min-grey: #f8f8f8;
 
 @function min($numbers...) {
     @return m#{i}n(#{$numbers});
+}
+
+%invisible {
+    position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        font-size: 0;
+        z-index: 1;
 }

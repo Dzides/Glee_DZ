@@ -1,0 +1,17 @@
+.partners {
+    position: absolute;
+    padding: 270px 0 70px;
+    min-height: 426px;
+    right: 0;
+    left: 0;
+    bottom: 15px;
+    background-color: $slb-orange;
+    z-index: -1;
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}

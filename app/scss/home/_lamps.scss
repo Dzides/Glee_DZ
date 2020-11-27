@@ -1,11 +1,11 @@
 .lamps {
-    padding: 100px 0 45px;
+    padding: 90px 0 35px;
 
     &__items {
         display: flex;
         justify-content: space-between;
     }
-
+    
     &__item {
         display: flex;
         justify-content: space-between;
@@ -57,7 +57,6 @@
         color: $md-blue;
         border: 1px solid $light-grey;
         border-radius: 5px;
-        cursor: pointer;
         svg{
             margin-left: 40px;
         }

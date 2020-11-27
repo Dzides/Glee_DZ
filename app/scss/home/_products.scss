@@ -1,81 +1,89 @@
 .products {
-    padding: 66px 0 80px;
+    padding: 66px 0 90px;
     text-align: center;
 
-         &__cards {
+    &__cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 45px 30px;
     }
+}
 
-    &__card {
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        padding: 30px 0 30px;
-        max-width: 270px;
-        min-height: 380px;
-        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    }
+.card-product {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px 30px;
+    max-width: 270px;
+    min-height: 380px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 8px;
 
     &__inner {
         position: relative;
         overflow: hidden;
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
             cursor: pointer;
 
-            .products__choice {
+            .card-product__choice {
                 transform: translateY(0);
             }
         }
     }
 
-    &__img {
-        position: relative;
-        margin: 0 auto 60px;
-        z-index: -1;
-    }
-
     &__choice {
         position: absolute;
+        display: flex;
+        justify-content: center;
         left: 0;
         right: 0;
-        bottom: 80px;
+        max-width: 200px;
+        bottom: 60px;
         transform: translateY(500%);
         transition: transform 0.5s;
+
+        svg {
+            position: relative;
+            top: 13px;
+            left: 12px;
+        }
     }
 
     &__link {
         position: relative;
+        font-size: 0;
 
         &+& {
-            margin-left: 30px;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            display: inline-block;
-            width: 46px;
-            height: 46px;
-            top: -18px;
-            left: -12px;
-            border-radius: 50%;
-            background-color: white;
-            z-index: -1;
-            transition: background-color 0.3s;
-        }
-
-        &:hover:before {
-            background-color: $ml-blue;
+            margin-left: 40px;
         }
 
         path {
             transition: fill 0.3s;
         }
 
+        &::before {
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            background-color: white;
+            z-index: -1;
+            transition: background-color 0.3s;
+        }
+
         &:hover {
+            &:before {
+                background-color: $ml-blue;
+            }
+
             path {
                 fill: white;
             }
@@ -84,6 +92,7 @@
 
     &__info {
         font-size: 16px;
+        margin-top: auto;
     }
 
     &__subtitle {
@@ -95,8 +104,9 @@
     &__price {
         color: $ml-blue;
     }
-}
 
-.mixitup-control-active {
-    color: $dark-grey;
+    .mixitup-control-active {
+        color: $dark-grey;
+    }
+
 }

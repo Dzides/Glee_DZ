@@ -1,5 +1,5 @@
 .video {
-    padding: 60px 0;
+    padding: 60px 0 50px;
 
     &__popup {
         width: 100%;
@@ -13,30 +13,32 @@
 
     &__play {
         position: absolute;
+        font-size: 0;
         z-index: -1;
 
-        &::before {
+        &::before,
+        &::after {
             content: '';
             position: absolute;
+            border-radius: 50%;
+        }
+
+        &::before {
             width: 101px;
             height: 101px;
             top: -37px;
             left: -42px;
             background-color: $ml-blue;
-            border-radius: 50%;
             z-index: -2;
         }
 
         &::after {
-            content: '';
-            position: absolute;
             width: 133px;
             height: 133px;
             top: -53px;
             left: -58px;
             background-color: white;
             opacity: 0.4;
-            border-radius: 50%;
             z-index: -3;
         }
     }
