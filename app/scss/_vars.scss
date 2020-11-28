@@ -5,6 +5,7 @@ $ml-blue: #a3bbc8;
 $dark-blue: #1f2044;
 $med-blue: #234969;
 $shade-blue: #667983;
+$bcs-blue: #222933;
 
 $vl-orange: #fcd7b6;
 $vls-orange: #fde3cc;
@@ -36,6 +37,11 @@ $min-grey: #f8f8f8;
 %dmsans-700 {
     font-family: "DMSans-Bold", sans-serif;
     font-weight: 700;
+}
+
+%rubic-300 {
+    font-family: "Rubik-Light", sans-serif;
+    font-weight: 300;
 }
 
 %rubic-400 {
