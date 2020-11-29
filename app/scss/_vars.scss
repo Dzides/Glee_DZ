@@ -84,3 +84,10 @@ $min-grey: #f8f8f8;
         font-size: 0;
         z-index: 1;
 }
+
+%minimal-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

@@ -24,19 +24,16 @@
     }
 
     &__content {
-        padding: 120px 0 230px;
+        padding: 115px 0 230px;
         margin-right: 60px;
         max-width: 470px;
         @extend %rubic-500;
     }
 
-     &__title,
-     &__text{
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-     }
+    &__title,
+    &__text {
+        @extend %minimal-text;
+    }
 
     &__title {
         margin-bottom: 22px;
@@ -47,23 +44,28 @@
     }
 
     &__text {
-        margin-bottom: 55px;
+        margin-bottom: 58px;
         @extend %rubic-400;
         font-size: 18px;
         line-height: 1.7;
         color: $md-blue;
-        
     }
 
     &__link {
-        padding: 22px 20px 22px 25px;
+        position: relative;
+        padding: 22px 100px 22px 30px;
         font-size: 15px;
         color: white;
         background-color: $ml-blue;
         transition: color 0.3s;
 
         svg {
-            margin-left: 60px;
+            position: absolute;
+            width: 22px;
+            height: 9px;
+            fill: white;
+            top: 27px;
+            right: 19px;
         }
 
         &:hover {

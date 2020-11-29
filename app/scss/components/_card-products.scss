@@ -34,12 +34,6 @@
         bottom: 60px;
         transform: translateY(500%);
         transition: transform 0.5s;
-
-        svg {
-            position: relative;
-            top: 13px;
-            left: 12px;
-        }
     }
 
     &__link {
@@ -52,6 +46,38 @@
 
         path {
             transition: fill 0.3s;
+        }
+
+        svg {
+            position: relative;
+            top: 13px;
+            left: 12px;
+            fill: $ml-blue;
+
+            &:hover {
+                fill: white;
+            }
+        }
+
+        &--search {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &--cart {
+            svg {
+                width: 22px;
+                height: 20px;
+            }
+        }
+
+        &--heart {
+            svg {
+                width: 22px;
+                height: 18px;
+            }
         }
 
         &::before {
