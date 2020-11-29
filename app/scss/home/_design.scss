@@ -11,79 +11,11 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 35px 30px;
     }
-}
-
-.card-design {
-    position: relative;
-    padding: 35px 0 0 37px;
-    max-width: 370px;
-    width: 100%;
-    min-height: 246px;
-    height: 100%;
-    text-align: left;
-    background-color: $min-grey;
-    border-radius: 6px 6px 0 0;
-    overflow: hidden;
-    z-index: 1;
-
-    &__images {
-        position: absolute;
-        z-index: -1;
-        object-fit: cover;
-
-        &--one {
-            top: -25px;
-            right: -90px;
-        }
-
-        &--two {
-            top: -16px;
-            right: -62px;
-        }
-
-        &--three {
-            top: 52px;
-            right: 56px;
-        }
-
-        &--four {
-            top: -6px;
-            right: -54px;
-        }
-
-        &--five {
-            top: 33px;
-            right: 31px;
-        }
-
-        &--six {
-            top: 61px;
-            right: -102px;
-            object-fit: none;
-        }
-    }
-
-    &__link {
-        @extend %invisible;
-    }
-
-    &__info {
-        display: inline-block;
-    }
-
-    &__subtitle {
-        max-width: 180px;
-        margin-bottom: 12px;
-        font-size: 20px;
-    }
-
-    &__variant {
-        width: 90px;
-        color: $ml-blue;
-    }
 
     .mixitup-control-active {
         color: $dark-grey;
     }
 
 }
+
+@import 'components/card-design';

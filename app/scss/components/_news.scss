@@ -35,6 +35,9 @@
         max-height: 250px;
         height: 100%;
         border-radius: 6px 6px 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
     }
 
     &__inner {

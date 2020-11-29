@@ -22,7 +22,7 @@
 
     &__item {
         &+& {
-            margin-left: 30px
+            margin-left: 35px
         }
     }
 
@@ -31,12 +31,9 @@
         line-height: 1;
         color: $md-blue;
 
-        &--active {
-            color: $dark-blue;
-        }
-
+        &--active,
         &:hover {
-            color: $dark-blue;
+            color: $ml-blue;
         }
     }
 
@@ -51,36 +48,82 @@
         position: relative;
         font-size: 0;
 
-        &--search {
-            width: 51px;
-            height: 51px;
-            margin-right: 21px;
-            background-color: $vr-blue;
-            background-image: url(../images/icon/search.svg);
-            background-repeat: no-repeat;
-            background-position: center center;
-            border-radius: 50%;
+        &--search,
+        &--cubic,
+        &--heart,
+        &--cart {
+            fill: $md-blue;
+            transition: color 0.3s;
+
+            &:hover {
+                svg {
+                    fill: white;
+                }
+            }
         }
 
-        &--heart::before {
-            content: '';
-            position: absolute;
-            width: 1px;
-            height: 32px;
-            top: -9px;
-            right: -30px;
-            background-color: $light-orange;
-        }
-
+        &--search,
         &--cubic {
             width: 51px;
             height: 51px;
-            background-color: $ml-blue;
-            background-image: url(../images/icon/cubic.svg);
-            background-repeat: no-repeat;
-            background-position: center center;
             border-radius: 50%;
+            background-color: $vr-blue;
+
+            svg {
+                position: absolute;
+            }
+
+            &:hover {
+                background-color: $ml-blue;
+            }
+
         }
+
+        &--search {
+            margin-right: 21px;
+
+            svg {
+                top: 17px;
+                left: 17px;
+                width: 16px;
+                height: 16px;
+            }
+
+        }
+
+        &--cubic {
+
+            svg {
+                top: 14px;
+                left: 15px;
+                width: 21px;
+                height: 21px;
+            }
+
+        }
+
+        &--heart,
+        &--cart {
+
+            svg {
+                width: 19px;
+                height: 17px;
+            }
+
+        }
+
+        &--heart {
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 32px;
+                top: -8px;
+                right: -30px;
+                background-color: $light-orange;
+            }
+        }
+
     }
 
     &__shop {
@@ -93,11 +136,6 @@
         margin-right: 18px;
         background-color: $vl-orange;
         border-radius: 25px;
-
-        svg {
-            display: block;
-            margin: 0 auto;
-        }
     }
 
     &__num {

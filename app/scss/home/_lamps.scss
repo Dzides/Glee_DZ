@@ -11,30 +11,29 @@
         justify-content: space-between;
         max-width: 870px;
         width: 100%;
-        max-height: 390px;
-        height: 100%;
         background-color: $light-brown;
     }
 
 
     &__img {
         position: relative;
-        top: -95px;
-        right: -110px;
+        top: -100px;
+        right: -136px;
     }
-
-
 
     &__inner {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: 90px 140px 0 0;
-        max-width: 55%;
+        justify-content: center;
+        padding-right: 140px;
+        max-width: 440px;
         text-align: left;
         color: $ds-blue;
     }
 
+    &__content{
+        margin-bottom: 35px;
+    }
     &__title {
         font-size: 26px;
         margin-bottom: 15px;
@@ -43,13 +42,11 @@
     &__text {
         @extend %rubic-400;
         display: flex;
-        align-items: start;
         font-size: 16px;
-        line-height: 2;
+        line-height: 1.5;
     }
 
     &__link {
-        margin-bottom: 80px;
         padding: 18px;
         max-width: 180px;
         @extend %rubic-500;

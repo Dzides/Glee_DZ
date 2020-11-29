@@ -24,7 +24,7 @@
                     <ul class="menu__list">
 
                         <li class="menu__item">
-                            <a class="menu__link menu__link--active" href="#">Home +</a>
+                            <span class="menu__link menu__link--active">Home +</span>
                         </li>
 
                         <li class="menu__item">
@@ -53,29 +53,35 @@
 
                 <div class="panel">
 
-                    <button class="panel__link panel__link--search" type="button">search</button>
+                    <button class="panel__link panel__link--search" type="button">search
+                        <svg>
+                            <use xlink:href="sprite.svg#search-header"></use>
+                        </svg>
+                    </button>
 
                     <div class="panel__shop">
 
                         <a class="panel__link panel__link--heart" href="#">favourites
-                            <svg width="19px" height="17px">
-                                <path fill-rule="evenodd" fill="rgb(36, 63, 77)"
-                                    d="M9.913,16.244 C9.818,16.244 9.722,16.226 9.633,16.188 C9.280,16.039 0.983,12.439 0.983,5.429 C1.074,2.779 3.190,0.721 5.801,0.721 C7.544,0.721 9.067,1.639 9.913,3.031 C10.760,1.639 12.282,0.721 14.025,0.721 C16.634,0.721 18.750,2.779 18.842,5.405 C18.842,12.439 10.545,16.039 10.193,16.188 C10.103,16.226 10.008,16.244 9.913,16.244 ZM5.801,2.106 C3.954,2.106 2.458,3.576 2.393,5.452 C2.393,10.860 8.518,14.115 9.913,14.787 C11.308,14.115 17.433,10.857 17.433,5.429 C17.368,3.576 15.870,2.106 14.025,2.106 C12.180,2.106 10.683,3.576 10.617,5.452 C10.605,5.825 10.293,6.121 9.913,6.121 L9.913,6.121 C9.533,6.121 9.221,5.825 9.208,5.452 C9.144,3.576 7.647,2.106 5.801,2.106 Z" />
+                            <svg>
+                                <use xlink:href="sprite.svg#heart-header"></use>
                             </svg>
                             <span class="panel__num">7</span>
                         </a>
 
-                        <a class="panel__link" href="#">basket
-                            <svg width="19px" height="17px">
-                                <path fill-rule="evenodd" fill="rgb(36, 63, 77)"
-                                    d="M18.936,3.932 L16.813,11.888 C16.744,12.147 16.508,12.328 16.240,12.328 L5.885,12.328 C5.876,12.326 5.868,12.326 5.862,12.328 C4.533,12.329 3.657,12.821 3.182,13.837 C3.082,14.051 2.868,14.178 2.645,14.178 C2.561,14.178 2.476,14.161 2.395,14.122 C2.099,13.984 1.970,13.632 2.109,13.335 C2.688,12.096 3.736,11.362 5.163,11.184 L4.108,5.793 C4.045,5.473 4.254,5.161 4.575,5.098 C4.896,5.032 5.207,5.246 5.271,5.566 L6.362,11.144 L15.785,11.144 L17.592,4.373 L4.314,4.373 C4.306,4.373 4.298,4.373 4.290,4.373 C2.162,4.373 0.321,2.789 0.007,0.680 C-0.042,0.355 0.181,0.054 0.505,0.006 C0.820,-0.049 1.129,0.181 1.178,0.505 C1.407,2.037 2.745,3.187 4.293,3.187 C4.299,3.187 4.305,3.187 4.311,3.187 L18.363,3.187 C18.547,3.187 18.721,3.273 18.833,3.419 C18.945,3.565 18.983,3.755 18.936,3.932 ZM5.527,12.831 C5.529,12.831 5.530,12.831 5.533,12.831 C6.083,12.831 6.602,13.045 6.994,13.433 C7.386,13.827 7.602,14.346 7.602,14.900 C7.604,15.740 7.103,16.493 6.325,16.817 C6.067,16.925 5.795,16.978 5.526,16.978 C4.990,16.978 4.463,16.768 4.065,16.371 C3.468,15.777 3.291,14.891 3.612,14.111 C3.934,13.334 4.686,12.831 5.527,12.831 ZM4.901,15.533 C5.157,15.787 5.538,15.862 5.870,15.724 C6.203,15.585 6.418,15.261 6.417,14.901 C6.417,14.664 6.324,14.441 6.157,14.272 C5.991,14.107 5.768,14.015 5.533,14.015 C5.530,14.015 5.529,14.015 5.529,14.015 C5.167,14.015 4.845,14.230 4.707,14.564 C4.570,14.897 4.645,15.279 4.901,15.533 ZM13.918,12.831 C14.464,12.791 14.998,13.049 15.386,13.434 C15.778,13.827 15.993,14.346 15.993,14.900 C15.996,15.739 15.496,16.493 14.719,16.817 C14.459,16.925 14.187,16.976 13.918,16.978 C13.381,16.978 12.854,16.768 12.457,16.371 C11.860,15.776 11.683,14.891 12.005,14.111 C12.326,13.334 13.077,12.831 13.918,12.831 ZM13.293,15.533 C13.549,15.788 13.931,15.862 14.263,15.724 C14.595,15.585 14.810,15.261 14.809,14.901 C14.809,14.664 14.717,14.441 14.549,14.272 C14.384,14.109 14.157,14.015 13.924,14.015 C13.923,14.015 13.923,14.015 13.923,14.015 C13.592,14.047 13.238,14.230 13.100,14.563 C12.961,14.897 13.037,15.279 13.293,15.533 Z" />
+                        <a class="panel__link panel__link--cart" href="#">basket
+                            <svg>
+                                <use xlink:href="sprite.svg#cart-header"></use>
                             </svg>
                             <span class="panel__num">10</span>
                         </a>
 
                     </div>
 
-                    <button class="panel__link panel__link--cubic" type="button">menu</button>
+                    <button class="panel__link panel__link--cubic" type="button">menu
+                        <svg>
+                            <use xlink:href="sprite.svg#cubic-header"></use>
+                        </svg>
+                    </button>
 
                 </div>
 
@@ -89,7 +95,8 @@
         <section class="slider-main">
             <div class="wrapper">
                 <div class="slider-main__wrapper">
-                    <div class="container slider-main__container">
+
+                    <div class="container">
 
                         <div class="slider-main__items">
 
@@ -108,13 +115,15 @@
 
                                     <a class="slider-main__link" href="#">
                                         Shop Now
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="9">
+                                            <path fill-rule="evenodd" fill="#FFF"
+                                                d="M.296 5.472H.288h16.956l-.1 2.857a.284.284 0 00-.084.205c0 .077.029.151.084.205l.172.172a.285.285 0 00.407.002l4.193-4.211a.292.292 0 000-.409L17.723.08a.29.29 0 00-.407 0l-.172.173a.287.287 0 000 .405l.113 2.865H.292A.297.297 0 000 3.818v1.37c0 .159.137.284.296.284z" />
+                                        </svg>
                                     </a>
 
                                 </div>
 
-                                <div class="slider-main__img">
-                                    <img src="images/slider_home/slide.png" alt="#">
-                                </div>
+                                <img class="slider-main__img" src="images/slider_home/slide.png" alt="#">
 
                             </div>
 
@@ -133,13 +142,15 @@
 
                                     <a class="slider-main__link" href="#">
                                         Shop Now
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="9">
+                                            <path fill-rule="evenodd" fill="#FFF"
+                                                d="M.296 5.472H.288h16.956l-.1 2.857a.284.284 0 00-.084.205c0 .077.029.151.084.205l.172.172a.285.285 0 00.407.002l4.193-4.211a.292.292 0 000-.409L17.723.08a.29.29 0 00-.407 0l-.172.173a.287.287 0 000 .405l.113 2.865H.292A.297.297 0 000 3.818v1.37c0 .159.137.284.296.284z" />
+                                        </svg>
                                     </a>
 
                                 </div>
 
-                                <div class="slider-main__img">
-                                    <img src="images/slider_home/slide.png" alt="#">
-                                </div>
+                                <img class="slider-main__img" src="images/slider_home/slide.png" alt="#">
 
                             </div>
 
@@ -158,19 +169,22 @@
 
                                     <a class="slider-main__link" href="#">
                                         Shop Now
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="9">
+                                            <path fill-rule="evenodd" fill="#FFF"
+                                                d="M.296 5.472H.288h16.956l-.1 2.857a.284.284 0 00-.084.205c0 .077.029.151.084.205l.172.172a.285.285 0 00.407.002l4.193-4.211a.292.292 0 000-.409L17.723.08a.29.29 0 00-.407 0l-.172.173a.287.287 0 000 .405l.113 2.865H.292A.297.297 0 000 3.818v1.37c0 .159.137.284.296.284z" />
+                                        </svg>
                                     </a>
 
                                 </div>
 
-                                <div class="slider-main__img">
-                                    <img src="images/slider_home/slide.png" alt="#">
-                                </div>
+                                <img class="slider-main__img" src="images/slider_home/slide.png" alt="#">
 
                             </div>
 
                         </div>
 
                     </div>
+
                 </div>
             </div>
         </section>
@@ -281,12 +295,12 @@
 
                             <div class="card-product__choice">
 
-                                <button class="card-product__link" type="button">search
+                                <a class="card-product__link" href="#">search
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                                         <path fill-rule="evenodd" fill="#A3BBC8"
                                             d="M19.45 19.448a1.873 1.873 0 01-2.651 0l-4.588-4.588a8.819 8.819 0 002.651-2.651l4.588 4.589c.733.732.733 1.92 0 2.65zM7.5 14.999A7.5 7.5 0 117.502-.003 7.5 7.5 0 017.5 15zm0-13.126a5.632 5.632 0 00-5.625 5.626A5.63 5.63 0 007.5 13.123a5.63 5.63 0 005.625-5.624A5.632 5.632 0 007.5 1.873zM4.375 7.499h-1.25A4.381 4.381 0 017.5 3.123v1.251a3.129 3.129 0 00-3.125 3.125z" />
                                     </svg>
-                                </button>
+                                </a>
 
                                 <button class="card-product__link" type="button">basket
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20">
@@ -312,9 +326,9 @@
                                 Wooden radio
                             </h3>
 
-                            <p class="card-product__price">
+                            <span class="card-product__price">
                                 $29.00
-                            </p>
+                            </span>
 
                         </div>
 
@@ -360,9 +374,9 @@
                                 Wooden chair
                             </h3>
 
-                            <p class="card-product__price">
+                            <span class="card-product__price">
                                 $29.00
-                            </p>
+                            </span>
 
                         </div>
 
@@ -408,9 +422,9 @@
                                 White chair
                             </h3>
 
-                            <p class="card-product__price">
+                            <span class="card-product__price">
                                 $29.00
-                            </p>
+                            </span>
 
                         </div>
 
@@ -456,9 +470,9 @@
                                 Retro table
                             </h3>
 
-                            <p class="card-product__price">
+                            <span class="card-product__price">
                                 $29.00
-                            </p>
+                            </span>
 
                         </div>
 
@@ -504,9 +518,9 @@
                                 Wooden radio
                             </h3>
 
-                            <p class="card-product__price">
+                            <span class="card-product__price">
                                 $29.00
-                            </p>
+                            </span>
 
                         </div>
 
@@ -552,9 +566,9 @@
                                 Wooden chair
                             </h3>
 
-                            <p class="card-product__price">
+                            <span class="card-product__price">
                                 $29.00
-                            </p>
+                            </span>
 
                         </div>
 
@@ -600,9 +614,9 @@
                                 White chair
                             </h3>
 
-                            <p class="card-product__price">
+                            <span class="card-product__price">
                                 $29.00
-                            </p>
+                            </span>
 
                         </div>
 
@@ -648,9 +662,9 @@
                                 Retro table
                             </h3>
 
-                            <p class="card-product__price">
+                            <span class="card-product__price">
                                 $29.00
-                            </p>
+                            </span>
 
                         </div>
 
@@ -894,18 +908,20 @@
 
                 <div class="news__top">
 
-                    <h3 class="news__title title">
+                    <h2 class="news__title title">
                         Our Insights & Articles
-                    </h3>
+                    </h2>
 
                     <div class="news__nav">
 
-                        <a class="news__link" href="#">View All</a>
+                        <a class="news__link" href="#">View All
 
-                        <svg width="7px" height="12px">
-                            <path fill-rule="evenodd" fill="rgb(38, 38, 38)"
-                                d="M1.333,11.687 C1.184,11.687 1.034,11.626 0.922,11.504 C0.819,11.390 0.767,11.245 0.767,11.100 C0.767,10.943 0.826,10.789 0.944,10.673 L5.491,6.198 L0.944,1.724 C0.826,1.609 0.767,1.453 0.767,1.297 C0.767,1.152 0.819,1.007 0.922,0.893 C1.138,0.657 1.496,0.647 1.723,0.870 L6.700,5.768 C6.705,5.772 6.709,5.777 6.714,5.782 C6.762,5.831 6.801,5.889 6.827,5.951 L6.827,5.951 C6.828,5.951 6.828,5.951 6.828,5.951 C6.862,6.029 6.880,6.112 6.880,6.195 C6.880,6.196 6.880,6.197 6.880,6.198 C6.880,6.284 6.862,6.369 6.827,6.447 L6.827,6.447 C6.827,6.448 6.826,6.448 6.826,6.448 C6.826,6.449 6.826,6.449 6.826,6.449 C6.826,6.449 6.826,6.449 6.826,6.450 C6.799,6.509 6.762,6.565 6.715,6.614 C6.710,6.619 6.705,6.623 6.700,6.628 L1.723,11.527 C1.614,11.635 1.473,11.687 1.333,11.687 Z" />
-                        </svg>
+                            <svg width="7px" height="12px">
+                                <path fill-rule="evenodd" fill="rgb(38, 38, 38)"
+                                    d="M1.333,11.687 C1.184,11.687 1.034,11.626 0.922,11.504 C0.819,11.390 0.767,11.245 0.767,11.100 C0.767,10.943 0.826,10.789 0.944,10.673 L5.491,6.198 L0.944,1.724 C0.826,1.609 0.767,1.453 0.767,1.297 C0.767,1.152 0.819,1.007 0.922,0.893 C1.138,0.657 1.496,0.647 1.723,0.870 L6.700,5.768 C6.705,5.772 6.709,5.777 6.714,5.782 C6.762,5.831 6.801,5.889 6.827,5.951 L6.827,5.951 C6.828,5.951 6.828,5.951 6.828,5.951 C6.862,6.029 6.880,6.112 6.880,6.195 C6.880,6.196 6.880,6.197 6.880,6.198 C6.880,6.284 6.862,6.369 6.827,6.447 L6.827,6.447 C6.827,6.448 6.826,6.448 6.826,6.448 C6.826,6.449 6.826,6.449 6.826,6.449 C6.826,6.449 6.826,6.449 6.826,6.450 C6.799,6.509 6.762,6.565 6.715,6.614 C6.710,6.619 6.705,6.623 6.700,6.628 L1.723,11.527 C1.614,11.635 1.473,11.687 1.333,11.687 Z" />
+                            </svg>
+
+                        </a>
 
                     </div>
 
@@ -1158,7 +1174,7 @@
 
                     <form class="footer__form" action="#">
 
-                        <label class=footer__plac>
+                        <label class="footer__plac">
                             Input email
                             <input class="footer__input" name="subscribe[email]" type="email"
                                 placeholder="Email address" required>

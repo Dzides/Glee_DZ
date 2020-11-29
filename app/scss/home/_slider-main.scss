@@ -1,26 +1,42 @@
 .slider-main {
 
     &__wrapper {
-        padding: 100px 0 25px;
+        position: relative;
+        padding: 99px 0 40px;
         background-color: $vl-orange;
-    }
 
-    &__container {
-        max-width: 1460px;
+        &::before {
+            content: '';
+            position: absolute;
+            max-width: 634px;
+            width: 100%;
+            max-height: 634px;
+            height: 100%;
+            top: 99px;
+            right: 185px;
+            border-radius: 50%;
+            background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 31.64%, rgba(255, 255, 255, 0.222586) 74.35%, rgba(255, 255, 255, 0) 99.87%);
+        }
     }
 
     &__item {
         display: flex !important;
-        justify-content: center;
     }
 
     &__content {
-        max-width: 500px;
-        padding-right: 70px;
-        margin-top: 115px;
-        margin-right: 30px;
+        padding: 120px 0 230px;
+        margin-right: 60px;
+        max-width: 470px;
         @extend %rubic-500;
     }
+
+     &__title,
+     &__text{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+     }
 
     &__title {
         margin-bottom: 22px;
@@ -36,72 +52,64 @@
         font-size: 18px;
         line-height: 1.7;
         color: $md-blue;
+        
     }
 
     &__link {
-        position: relative;
-        padding: 22px 100px 25px 25px;
+        padding: 22px 20px 22px 25px;
         font-size: 15px;
         color: white;
         background-color: $ml-blue;
+        transition: color 0.3s;
 
-        &::before {
-            content: '';
-            position: absolute;
-            width: 22px;
-            height: 10px;
-            top: 26px;
-            right: 21px;
-            background-image: url(../images/shop_go.png)
+        svg {
+            margin-left: 60px;
         }
+
+        &:hover {
+            background-color: $ds-blue;
+            color: white;
+        }
+
     }
 
     &__img {
-        position: relative;
-        padding-top: 178px;
-        padding-bottom: 204px;
+        margin-top: 178px;
+        max-width: 640px;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
 
-        &::before {
-            content: '';
-            position: absolute;
-            width: 634px;
-            height: 634px;
-            top: 0;
-            right: -114px;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+        button {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+            background-color: $vls-orange;
+            color: $shade-blue;
             border-radius: 50%;
-            background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 31.64%, rgba(255, 255, 255, 0.222586) 74.35%, rgba(255, 255, 255, 0) 99.87%);
-            z-index: -1;
+            margin-right: 11px;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: white;
+                color: $ds-blue;
+            }
         }
-    }
 
-    .slick-dots {
-        display: flex;
-        justify-content: center;
-
-        li {
+        &.slick-active {
             button {
-                width: 30px;
-                height: 30px;
-                font-size: 15px;
-                background-color: $vls-orange;
-                color: $shade-blue;
-                border-radius: 50%;
-                margin-right: 11px;
-                margin-bottom: 20px;
-                transition: background-color 0.3s, color 0.3s;
-
-                &:hover {
-                    background-color: white;
-                    color: $ds-blue;
-                }
-            }
-
-            &.slick-active {
-                button {
-                    background-color: white;
-                }
+                background-color: white;
             }
         }
     }
-
 }
