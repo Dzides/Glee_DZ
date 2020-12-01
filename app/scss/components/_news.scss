@@ -1,6 +1,5 @@
 .news {
-    position: relative;
-    padding: 60px 0 270px;
+    padding: 60px 0 0;
 
     &__top {
         margin-bottom: 40px;
@@ -14,8 +13,19 @@
     }
 
     &__link {
-        margin-right: 15px;
         font-size: 16px;
+        transition: color 0.3s;
+
+        svg {
+            width: 7px;
+            height: 12px;
+            margin-left: 15px;
+        }
+
+        &:hover,
+        & svg {
+            color: $vid-blue;
+        }
     }
 
     &__items {
@@ -28,24 +38,37 @@
         width: 100%;
         min-height: 420px;
         background-color: white;
+
+    }
+
+    &__hidden {
+        overflow: hidden;
     }
 
     &__images {
-        width: 100%;
+        display: block;
         max-height: 250px;
         height: 100%;
         border-radius: 6px 6px 0 0;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+        object-fit: cover;
+        transition: filter 0.5s ease-in-out scale 1s;
+        transition: 1s;
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+
+        &:hover {
+            -webkit-filter: grayscale(99%);
+            filter: grayscale(99%);
+            transform: scale(1.2);
+        }
     }
 
     &__inner {
-        padding: 35px 30px 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 170px;
+        padding: 35px 30px 30px;
+        min-height: 180px;
     }
 
     &__content {
@@ -64,24 +87,42 @@
     }
 
     &__text {
-        text-align: left;
         @extend %dmsans-500;
         font-size: 18px;
         line-height: 1.15;
+        @extend %minimal-text;
+
+        &:hover {
+            color: $vid-blue;
+        }
     }
 
     &__info {
-        padding: 25px 0 20px;
+        display: flex;
+        margin-top: auto;
+        padding-top: 15px;
         @extend %myriadpro-400;
         text-transform: uppercase;
         font-size: 14px;
         border-top: 1px solid $light-grey;
     }
 
-    &__data{
-        margin-right: 28px;
+    &__data {
+        margin-right: 30px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 7px;
+        }
     }
-    &__pin{
-        margin-right: 5px;
+
+    &__author {
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
     }
+
 }

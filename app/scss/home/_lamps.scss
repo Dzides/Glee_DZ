@@ -5,57 +5,5 @@
         display: flex;
         justify-content: space-between;
     }
-    
-    &__item {
-        display: flex;
-        justify-content: space-between;
-        max-width: 870px;
-        width: 100%;
-        background-color: $light-brown;
-    }
-
-
-    &__img {
-        position: relative;
-        top: -100px;
-        right: -136px;
-    }
-
-    &__inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-right: 140px;
-        max-width: 440px;
-        text-align: left;
-        color: $ds-blue;
-    }
-
-    &__content{
-        margin-bottom: 35px;
-    }
-    &__title {
-        font-size: 26px;
-        margin-bottom: 15px;
-    }
-
-    &__text {
-        @extend %rubic-400;
-        display: flex;
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    &__link {
-        padding: 18px;
-        max-width: 180px;
-        @extend %rubic-500;
-        font-size: 15px;
-        color: $md-blue;
-        border: 1px solid $light-grey;
-        border-radius: 5px;
-        svg{
-            margin-left: 40px;
-        }
-    }
 }
+
