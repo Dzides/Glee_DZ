@@ -1,0 +1,166 @@
+.team {
+    padding: 120px 0;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        padding-right: 80px;
+        width: 33%;
+    }
+
+    &__title {
+        margin-bottom: 17px;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        -webkit-line-clamp: 20;
+    }
+
+    &__btn {
+        position: relative;
+        padding: 15px 60px 15px 20px;
+        color: white;
+        background-color: $ml-blue;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $ds-blue;
+        }
+
+        svg {
+            position: absolute;
+            width: 15px;
+            height: 11px;
+            fill: white;
+            top: 18px;
+            right: 24px;
+        }
+    }
+
+    &__board {
+        display: grid;
+        width: 66%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 100px 30px;
+    }
+
+    &__person {
+        position: relative;
+        min-height: 320px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        transition: filter 0.5s ease-in-out scale 1s;
+        transition: 1s;
+        -webkit-filter: grayscale(70%);
+        filter: grayscale(70%);
+
+        &:hover {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    &__profile {
+        position: absolute;
+        display: flex;
+        bottom: -22%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 20px 31px 24px;
+        max-width: 325px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        z-index: -1;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__name {
+        margin-bottom: 8px;
+        font-size: 22px;
+        color: $md-blue;
+    }
+
+    &__skill {
+        @extend %rubic-400;
+        font-size: 16px;
+        line-height: 1.9;
+        color: $skill-blue;
+    }
+
+    &__icon {
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.3s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $rad-grey;
+            z-index: -1;
+        }
+
+        &:hover {
+            &::before {
+                background-color: $ds-blue;
+            }
+
+        }
+
+        svg {
+            position: absolute;
+            fill: $soc-grey;
+
+            &:hover {
+                fill: white;
+            }
+        }
+
+        &--inst {
+            &::before {
+                top: -20px;
+                right: 52px;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+                top: -9px;
+                right: 62px;
+            }
+        }
+
+        &--google {
+            &::before {
+                top: -20px;
+                right: 3px;
+            }
+
+            svg {
+                width: 23px;
+                height: 23px;
+                top: -12px;
+                right: 10px;
+            }
+        }
+
+    }
+
+}
