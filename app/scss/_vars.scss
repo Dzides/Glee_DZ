@@ -7,6 +7,8 @@ $med-blue: #234969;
 $shade-blue: #667983;
 $bcs-blue: #222933;
 $vid-blue: #608092;
+$bord-blue: #09316f;
+$skill-blue: #565872;
 
 $vl-orange: #fcd7b6;
 $vls-orange: #fde3cc;
@@ -23,6 +25,9 @@ $mini-grey: #e8e4df;
 $mds-grey: #414141;
 $medium-grey: #585858;
 $min-grey: #f8f8f8;
+$soc-grey: #888888;
+$rad-grey: #f6f6f6;
+$lt-grey: #4c4c4c;
 
 
 %dmsans-400 {
@@ -53,6 +58,11 @@ $min-grey: #f8f8f8;
 %rubic-500 {
     font-family: "Rubik-Medium", sans-serif;
     font-weight: 500;
+}
+
+%rubic-700 {
+    font-family: "Rubik-Bold", sans-serif;
+    font-weight: 700;
 }
 
 %myriadpro-400 {

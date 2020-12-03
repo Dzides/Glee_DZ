@@ -54,6 +54,15 @@
 }
 
 @font-face {
+    font-family: "Rubik-Bold";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/Rubik-Bold.woff2") format("woff2"),
+        url("../fonts/Rubik-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
     font-family: "MyriadProRegular";
     font-weight: 400;
     font-style: normal;

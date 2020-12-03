@@ -1,0 +1,123 @@
+.mission {
+    padding: 120px 0;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__images {
+        max-width: 570px;
+        width: 100%;
+        margin-right: 30px;
+        display: flex;
+    }
+
+    &__img {
+        max-width: 570px;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 83px 0 0 18px;
+        color: $ds-blue;
+    }
+
+    &__lead {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    &__num {
+        margin-right: 23px;
+        @extend %rubic-700;
+        font-size: 140px;
+        line-height: 100px;
+        color: $ml-blue;
+    }
+
+    &__comment {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @extend %rubic-400;
+        font-size: 16px;
+        line-height: 0.8;
+
+        span+span {
+            margin-top: 18px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 36px;
+        line-height: 1;
+        -webkit-line-clamp: 2;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+        -webkit-line-clamp: 4;
+    }
+
+    &__board {
+        padding-top: 37px;
+        display: flex;
+        border-top: 2px solid rgba($bord-blue, 0.102);
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 36px;
+        line-height: 38px;
+
+        svg {
+            position: absolute;
+            left: 25px;
+            fill: $ml-blue;
+        }
+
+        span {
+            font-size: 16px;
+            line-height: 1.7;
+            color: $lt-grey;
+        }
+
+        &--note {
+            width: 168px;
+            padding-left: 53px;
+
+            svg {
+                width: 37px;
+                height: 38px;
+                left: 0;
+            }
+        }
+
+        &--mega {
+            width: 200px;
+            padding-left: 88px;
+            border-right: 1px solid rgba($bord-blue, 0.102);
+            border-left: 1px solid rgba($bord-blue, 0.102);
+
+            svg {
+                width: 44px;
+                height: 40px;
+            }
+        }
+
+        &--award {
+            padding-left: 88px;
+
+            svg {
+                width: 43px;
+                height: 42px;
+            }
+
+        }
+    }
+
+}

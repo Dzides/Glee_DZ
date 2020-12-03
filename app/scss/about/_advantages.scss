@@ -1,0 +1,52 @@
+.advantages {
+    background-color: $vl-orange;
+
+    &__items {
+        padding: 82px 0 80px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 25%;
+        color: $ds-blue;
+        z-index: 1;
+
+        svg {
+            fill: $ds-blue;
+            width: 65px;
+            height: 65px;
+            margin-bottom: 13px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 33px;
+            height: 33px;
+            right: 100px;
+            top: 30px;
+            background-color: $ml-blue;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+    }
+
+    &__text {
+        margin-top: 10px;
+        font-size: 18px;
+        @extend %minimal-text;
+        -webkit-line-clamp: 2;
+    }
+
+}

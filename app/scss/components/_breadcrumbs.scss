@@ -1,0 +1,39 @@
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        padding-right: 20px;
+        position: relative;
+        @extend %rubic-400;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $bcs-blue;
+        &:hover{
+            color: $ml-blue;
+        }
+        &::after{
+            content: '/';
+            position: absolute;
+            right: 7px;
+            top: 1px;
+            color: $bcs-blue;
+        }
+
+        &:last-child {
+            color: $ml-blue;
+            padding-right: 0;
+            &::after{
+                display: none;
+            }
+            &:hover{
+                color: $ml-blue;
+            }
+        }
+    }
+   
+}

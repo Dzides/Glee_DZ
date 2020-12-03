@@ -32,9 +32,20 @@ body {
     max-width: 1200px;
 }
 
+.title,
+.text {
+    @extend %minimal-text;
+}
+
 .title {
     font-size: 36px;
     margin-bottom: 25px;
+}
+
+.text {
+    @extend %rubic-400;
+    font-size: 16px;
+    line-height: 1.9;
 }
 
 .filter {
@@ -58,5 +69,3 @@ body {
         color: $dark-grey;
     }
 }
-
-
