@@ -6,7 +6,7 @@
     &__top {
         display: flex;
         justify-content: space-between;
-        padding: 75px 0 61px;
+        padding: 93px 0 61px;
         border-bottom: 1px solid #dae4e9;
     }
 
@@ -80,11 +80,11 @@
 
     &__plac {
         font-size: 0;
+        width: 100%;
     }
 
     &__input {
         padding: 0 15px;
-        max-width: 170px;
         min-height: 38px;
         width: 100%;
         font-size: 12px;
@@ -145,4 +145,12 @@
         }
     }
 
+}
+
+.footer-login{
+    padding-top: 51px;
+}
+
+.footer-about{
+    padding-top: 80px;
 }

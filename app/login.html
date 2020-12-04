@@ -93,27 +93,76 @@
     <main class="main">
 
         <section class="top">
-                <div class="container">
+            <div class="container">
 
-                    <h2 class="top__title">Log in</h2>
+                <h2 class="top__title">Log in</h2>
 
-                    <div class="breadcrumbs">
+                <div class="breadcrumbs">
 
-                        <ul class="breadcrumbs__list">
+                    <ul class="breadcrumbs__list">
 
-                            <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#">Home</a>
-                            </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Home</a>
+                        </li>
 
-                            <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#">Log in</a>
-                            </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Log in</a>
+                        </li>
 
-                        </ul>
+                    </ul>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="modal">
+            <div class="container">
+
+                <div class="modal__block">
+
+                    <form class="modal__form" action="#">
+
+                        <label class="modal__text">
+                            Username or email address*
+                            <input class="modal__input" type="text" required>
+                        </label>
+
+                        <label class="modal__text">
+                            Password*
+                            <input class="modal__input" type="password" required>
+                        </label>
+
+                    </form>
+
+                    <button class="modal__btn" type="submit">
+                        Login
+                    </button>
+
+                    <div class="modal__under">
+
+                        <label class="modal__text">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+
+                        <a class="modal__text modal__text--lost" href="#">
+                            Lost your password?
+                        </a>
 
                     </div>
 
+                    <span class="modal__text modal__text--lose">
+                        Not registered? No problem
+                    </span>
+
+                    <a class="modal__link" href="#">
+                        Create an account
+                    </a>
+
                 </div>
+
+            </div>
         </section>
 
         <div class="partners partners-login">
@@ -135,7 +184,7 @@
     <footer class="footer">
         <div class="container">
 
-            <div class="footer__top">
+            <div class="footer__top footer-login">
 
                 <div class="footer__column footer__column--first">
 
