@@ -30,19 +30,3 @@
 
 @import 'terms/terms';
 
-
-// ol {
-//     list-style-type: none;
-//     counter-reset: item;
-// }
-
-// li:nth-child(-n+9)::before {
-//     content: '0'counter(item) '.';
-//     counter-increment: item;
-// }
-
-// li:nth-child(n+10)::before {
-//     content: counter(item);
-//     counter-increment: item;
-// }
-

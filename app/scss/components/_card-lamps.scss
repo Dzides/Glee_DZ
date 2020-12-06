@@ -16,6 +16,9 @@
             position: absolute;
             bottom: 87px;
             right: 10px;
+            max-width: 300px;
+            max-height: 400px;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -32,10 +35,6 @@
     &__title,
     &__text {
         @extend %minimal-text;
-
-        &:hover {
-            opacity: 0.8;
-        }
     }
 
     &__title {

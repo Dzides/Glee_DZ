@@ -14,6 +14,14 @@
         align-items: center;
     }
 
+    &__item{
+        img{
+           max-width: 170px;
+           max-height: 85px;
+           object-fit: cover;
+        }
+    }
+
 }
 
 .partners-login{

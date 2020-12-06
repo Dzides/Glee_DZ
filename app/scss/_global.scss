@@ -14,7 +14,9 @@ body {
 }
 
 .logo {
-    font-size: 0;
+    width: 146px;
+    height: 39px;
+    object-fit: cover;
 }
 
 .main {
@@ -48,25 +50,24 @@ body {
     line-height: 1.9;
 }
 
-.filter {
+.filters {
     margin-bottom: 80px;
+
+    &__btn {
+        margin: 0 14px;
+        font-size: 16px;
+        color: $grey;
+
+        &:focus {
+            color: $medium-grey;
+        }
+
+        &:hover {
+            color: $light-grey;
+        }
+
+        &:active {
+            color: $dark-grey;
+        }
+    }
 }
-
-.btn {
-    margin: 0 14px;
-    font-size: 16px;
-    color: $grey;
-
-    &:focus {
-        color: $medium-grey;
-    }
-
-    &:hover {
-        color: $light-grey;
-    }
-
-    &:active {
-        color: $dark-grey;
-    }
-}
-
