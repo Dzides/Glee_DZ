@@ -103,3 +103,8 @@ $lt-grey: #4c4c4c;
     overflow: hidden;
 }
 
+@mixin r($width) {
+    @media only screen and (max-width: $width+ "px") {
+      @content;
+    }
+  }

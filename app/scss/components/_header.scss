@@ -1,10 +1,81 @@
 .header {
     padding: 50px 0 43px;
 
-     &__inner {
+    @media (max-width: 992px) {
+        padding: 20px 0 20px;
+    }
+
+    &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
+
+    &__btn {
+        
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        svg {
+            width: 50px;
+            height: 50px;
+            fill: $md-blue;
+            transition: fill 0.3s;
+            &:hover {
+                fill: $ml-blue;
+            }
+        }
+    }
+
+    &__search {
+        @media (max-width: 576px) {
+            margin: 5px 5px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__look {
+        position: relative;
+        width: 100%;
+        font-size: 0;
+    }
+
+    &__write {
+        padding: 5px 60px 5px 20px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 1;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 19px;
+        color: $ds-blue;
+    }
+
+    &__enter {
+        position: absolute;
+        width: 29px;
+        height: 29px;
+        right: 20px;
+        border-radius: 50%;
+        background-color: $vr-blue;
+
+        &:hover {
+            background-color: $ml-blue;
+        }
+
+        svg {
+            width: 19px;
+            height: 17px;
+            fill: $ds-blue;
+
+            &:hover {
+                fill: white;
+            }
+        }
+    }
+
 }
 
 .menu {
@@ -15,14 +86,62 @@
     @extend %rubic-500;
     font-size: 15px;
 
+    @media (max-width: 1200px) {
+        margin-left: 0;
+    }
+
+    @media (max-width: 992px) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 90px;
+        background-color: $vr-blue;
+    }
+
+    @media (max-width: 768px) {
+        // display: none;
+        top: 110px;
+    }
+
     &__list {
         display: flex;
-        justify-content: space-between;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            justify-content: space-around;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            position: absolute;
+            top: -20px;
+            background-color: $vr-blue;
+            flex-direction: column;
+            text-align: center;
+            transform: translateX(-100%);
+            transition: transform .5s;
+            z-index: 1;
+            &--active{
+                transform: translateX(0%);
+            }
+        }
     }
 
     &__item {
+        @media (max-width: 768px) {
+            border-bottom: 1px solid $ml-blue;
+        }
+
         &+& {
-            margin-left: 35px
+            margin-left: 35px;
+
+            @media (max-width: 1200px) {
+                margin-left: 15px;
+            }
+
+            @media (max-width: 992px) {
+                margin-left: 0;
+            }
         }
     }
 
@@ -30,10 +149,27 @@
         font-size: 15px;
         line-height: 1;
         color: $md-blue;
+        transition: background-color 0.3s, color 0.3s;
+
+        @media (max-width: 992px) {
+            display: block;
+            padding: 15px 15px;
+        }
 
         &--active,
         &:hover {
             color: $ml-blue;
+
+            @media (max-width: 768px) {
+                color: white;
+                background-color: $ml-blue;
+            }
+        }
+
+        &--focus {
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
     }
 
@@ -44,6 +180,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 576px) {
+        display: none;
+    }
+
     &__link {
         position: relative;
         font-size: 0;
@@ -53,7 +193,7 @@
         &--heart,
         &--cart {
             fill: $md-blue;
-            transition: color 0.3s;
+            transition: background-color 0.3s, color 0.3s, fill 0.3s;
 
             &:hover {
                 svg {
@@ -83,16 +223,23 @@
         &--search {
             margin-right: 21px;
 
+            @media (max-width: 768px) {
+                margin-right: 0;
+            }
+
             svg {
                 top: 17px;
                 left: 17px;
-                width: 16px;
+                width: 17px;
                 height: 16px;
             }
 
         }
 
         &--cubic {
+            @media (max-width: 768px) {
+                display: none;
+            }
 
             svg {
                 top: 15px;
@@ -105,6 +252,9 @@
 
         &--heart,
         &--cart {
+            @media (max-width: 768px) {
+                display: none;
+            }
 
             svg {
                 width: 19px;
@@ -114,6 +264,10 @@
         }
 
         &--heart {
+            @media (max-width: 576px) {
+                display: none;
+            }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -122,6 +276,10 @@
                 top: -8px;
                 right: -30px;
                 background-color: $light-orange;
+
+                @media (max-width: 576px) {
+                    display: none;
+                }
             }
         }
 
@@ -137,6 +295,10 @@
         margin-right: 18px;
         background-color: $vl-orange;
         border-radius: 25px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__num {
@@ -151,6 +313,123 @@
         color: $ds-blue;
         background-color: white;
         border-radius: 50%;
+    }
+
+}
+
+.panel-mobil {
+    @media (max-width: 768px) {
+        padding: 30px 0;
+        align-items: center;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+        justify-content: space-around;
+        height: 56px;
+        line-height: 56px;
+        background: #fff;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+
+        &__link {
+            position: relative;
+            font-size: 0;
+
+            &--search,
+            &--cubic,
+            &--heart,
+            &--cart,
+            &--home {
+                width: 51px;
+                height: 51px;
+                border-radius: 50%;
+                background-color: $vr-blue;
+                fill: $md-blue;
+                transition: background-color 0.3s, color 0.3s, fill 0.3s;
+
+                @media (max-width: 576px) {
+                    background-color: transparent;
+                }
+
+                svg {
+                    position: absolute;
+                    fill: $ds-blue;
+                }
+
+                &:hover {
+                    background-color: $ml-blue;
+
+                    @media (max-width: 576px) {
+                        .panel-mobil__num {
+                            background-color: white;
+                        }
+                    }
+
+                    svg {
+                        fill: white;
+                    }
+                }
+            }
+
+            &--search {
+                svg {
+                    top: 17px;
+                    left: 17px;
+                    width: 19px;
+                    height: 16px;
+                }
+            }
+
+            &--cubic {
+                svg {
+                    top: 15px;
+                    left: 15px;
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+
+            &--heart,
+            &--cart {
+
+                svg {
+                    top: 17px;
+                    left: 15px;
+                    width: 19px;
+                    height: 17px;
+                }
+            }
+
+            &--home {
+                svg {
+                    top: 14px;
+                    left: 15px;
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+        }
+
+        &__num {
+            position: absolute;
+            top: 10px;
+            left: 27px;
+            width: 16px;
+            height: 16px;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            color: $ds-blue;
+            background-color: white;
+            border-radius: 50%;
+
+            @media (max-width: 576px) {
+                background-color: $vr-blue;
+
+            }
+        }
     }
 
 }

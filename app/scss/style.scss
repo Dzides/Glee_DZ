@@ -30,3 +30,124 @@
 
 @import 'terms/terms';
 
+
+.slider-main {
+
+    &__wrapper {
+        position: relative;
+        padding: 99px 0 40px;
+        background-color: $vl-orange;
+
+        &::before {
+            content: '';
+            position: absolute;
+            max-width: 634px;
+            width: 100%;
+            max-height: 634px;
+            height: 100%;
+            top: 99px;
+            right: 185px;
+            border-radius: 50%;
+            background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 31.64%, rgba(255, 255, 255, 0.222586) 74.35%, rgba(255, 255, 255, 0) 99.87%);
+            @media (max-width: 1200px) {
+                display: none;
+            }
+        }
+
+    }
+
+    &__item {
+        display: flex !important;
+    }
+
+    &__content {
+        padding: 115px 0 230px;
+        margin-right: 60px;
+        max-width: 470px;
+        @extend %rubic-500;
+    }
+
+    &__title,
+    &__text {
+        @extend %minimal-text;
+    }
+
+    &__title {
+        margin-bottom: 22px;
+        font-size: 72px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $ds-blue;
+    }
+
+    &__text {
+        margin-bottom: 58px;
+        @extend %rubic-400;
+        font-size: 18px;
+        line-height: 1.7;
+        color: $md-blue;
+    }
+
+    &__link {
+        position: relative;
+        padding: 22px 100px 22px 30px;
+        font-size: 15px;
+        color: white;
+        background-color: $ml-blue;
+        transition: color 0.3s;
+
+        svg {
+            position: absolute;
+            width: 22px;
+            height: 9px;
+            fill: white;
+            top: 27px;
+            right: 19px;
+        }
+
+        &:hover {
+            background-color: $ds-blue;
+            color: white;
+        }
+
+    }
+
+    &__img {
+        margin-top: 178px;
+        max-width: 640px;
+        width: 100%;
+        max-height: 264px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+        button {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+            background-color: $vls-orange;
+            color: $shade-blue;
+            border-radius: 50%;
+            margin-right: 11px;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: white;
+                color: $ds-blue;
+            }
+        }
+
+        &.slick-active {
+            button {
+                background-color: white;
+            }
+        }
+    }
+}

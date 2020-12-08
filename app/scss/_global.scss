@@ -14,7 +14,7 @@ body {
 }
 
 .logo {
-    width: 146px;
+    max-width: 146px;
     height: 39px;
     object-fit: cover;
 }
@@ -32,6 +32,18 @@ body {
 .container {
     @extend .wrapper;
     max-width: 1200px;
+}
+
+.header__btn {
+    display: none;
+}
+
+.header__search {
+    display: none;
+}
+
+.panel-mobil {
+    display: none;
 }
 
 .title,

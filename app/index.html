@@ -10,10 +10,31 @@
 
 <body>
 
-      <header class="header">
+    <header class="header" id="home">
         <div class="wrapper">
 
+            <form class="header__search" action="#">
+
+                <label class="header__look">
+                    Search the site
+                    <input class="header__write" name="search" type="text" placeholder="Search the site...">
+                </label>
+
+                <button class="header__enter" type="button">
+                    <svg>
+                        <use xlink:href="sprite.svg#search-header"></use>
+                    </svg>
+                </button>
+
+            </form>
+
             <div class="header__inner">
+
+                <button class="header__btn" type="button">
+                    <svg>
+                        <use xlink:href="sprite.svg#burger"></use>
+                    </svg>
+                </button>
 
                 <a class="header__logo" href="#">
                     <img class="header__img logo" src="images/logo.png" alt="logotype">
@@ -24,7 +45,7 @@
                     <ul class="menu__list">
 
                         <li class="menu__item">
-                            <span class="menu__link menu__link--active">Home +</span>
+                            <span class="menu__link menu__link--active menu__link--focus">Home +</span>
                         </li>
 
                         <li class="menu__item">
@@ -84,6 +105,36 @@
                     </button>
 
                 </div>
+
+            </div>
+
+            <div class="panel-mobil">
+
+                <a class="panel-mobil__link panel-mobil__link--home" href="#home">home
+                    <svg>
+                        <use xlink:href="sprite.svg#home"></use>
+                    </svg>
+                </a>
+
+                <a class="panel-mobil__link panel-mobil__link--heart" href="#">favourites
+                    <svg>
+                        <use xlink:href="sprite.svg#heart-header"></use>
+                    </svg>
+                    <span class="panel-mobil__num">7</span>
+                </a>
+
+                <a class="panel-mobil__link panel-mobil__link--cart" href="#">basket
+                    <svg>
+                        <use xlink:href="sprite.svg#cart-header"></use>
+                    </svg>
+                    <span class="panel-mobil__num">10</span>
+                </a>
+
+                <button class="panel-mobil__link panel-mobil__link--cubic" type="button">menu
+                    <svg>
+                        <use xlink:href="sprite.svg#cubic-header"></use>
+                    </svg>
+                </button>
 
             </div>
 
@@ -186,7 +237,7 @@
             </div>
         </section>
 
-        <div class="board">
+        <!-- <div class="board">
             <div class="wrapper">
                 <div class="board__wrapper">
 
@@ -254,9 +305,9 @@
 
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <section class="products">
+        <!-- <section class="products">
             <div class="container">
 
                 <h2 class="products__title title">
@@ -632,9 +683,9 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
 
-        <div class="lamps">
+        <!-- <div class="lamps">
             <div class="wrapper">
 
                 <div class="lamps__items">
@@ -705,9 +756,9 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
-        <section class="design">
+        <!-- <section class="design">
             <div class="container">
 
                 <h2 class="design__title title">
@@ -844,9 +895,9 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
 
-        <div class="video">
+        <!-- <div class="video">
 
             <div class="video__popup" style="background-image: url(images/video.jpg);">
 
@@ -858,9 +909,9 @@
 
             </div>
 
-        </div>
+        </div> -->
 
-        <section class="news">
+        <!-- <section class="news">
             <div class="container">
 
                 <div class="news__top">
@@ -1023,9 +1074,9 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
 
-        <div class="partners">
+        <!-- <div class="partners">
             <div class="container">
 
                 <ul class="partners__list">
@@ -1037,11 +1088,11 @@
                 </ul>
 
             </div>
-        </div>
+        </div> -->
 
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
 
             <div class="footer__top">
@@ -1215,7 +1266,7 @@
             </div>
 
         </div>
-    </footer>
+    </footer> -->
 
 
     <script src="js/main.min.js"></script>
