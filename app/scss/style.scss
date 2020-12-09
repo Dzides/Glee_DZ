@@ -31,123 +31,193 @@
 @import 'terms/terms';
 
 
-.slider-main {
+.board {
 
     &__wrapper {
-        position: relative;
-        padding: 99px 0 40px;
-        background-color: $vl-orange;
+        background-color: $slb-orange;
+    }
 
-        &::before {
-            content: '';
-            position: absolute;
-            max-width: 634px;
-            width: 100%;
-            max-height: 634px;
-            height: 100%;
-            top: 99px;
-            right: 185px;
-            border-radius: 50%;
-            background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 31.64%, rgba(255, 255, 255, 0.222586) 74.35%, rgba(255, 255, 255, 0) 99.87%);
-            @media (max-width: 1200px) {
-                display: none;
-            }
+    &__items {
+        display: flex;
+        align-items: center;
+        @include r(768){
+            display: block;
         }
 
     }
 
     &__item {
-        display: flex !important;
-    }
-
-    &__content {
-        padding: 115px 0 230px;
-        margin-right: 60px;
-        max-width: 470px;
-        @extend %rubic-500;
-    }
-
-    &__title,
-    &__text {
-        @extend %minimal-text;
-    }
-
-    &__title {
-        margin-bottom: 22px;
-        font-size: 72px;
-        line-height: 1;
-        text-transform: uppercase;
-        color: $ds-blue;
-    }
-
-    &__text {
-        margin-bottom: 58px;
-        @extend %rubic-400;
-        font-size: 18px;
-        line-height: 1.7;
-        color: $md-blue;
-    }
-
-    &__link {
         position: relative;
-        padding: 22px 100px 22px 30px;
-        font-size: 15px;
-        color: white;
-        background-color: $ml-blue;
-        transition: color 0.3s;
 
         svg {
             position: absolute;
-            width: 22px;
-            height: 9px;
-            fill: white;
-            top: 27px;
-            right: 19px;
+            z-index: 1;
+            fill: $ml-blue;
         }
 
-        &:hover {
-            background-color: $ds-blue;
-            color: white;
+        &--right {
+            border-right: 1px solid $mini-grey;
+            padding: 46px 150px 40px 205px;
+
+            svg {
+                width: 51px;
+                height: 50px;
+                top: 48px;
+                left: 148px;
+            }
         }
 
+        &--center {
+            padding: 38px 136px 40px 187px;
+
+            svg {
+                width: 50px;
+                height: 30px;
+                left: 139px;
+            }
+        }
+
+        &--left {
+            padding: 46px 128px 40px 194px;
+            border-left: 1px solid $mini-grey;
+
+            svg {
+                width: 50px;
+                height: 45px;
+                top: 48px;
+                left: 143px;
+            }
+        }
+
+        &--right,
+        &--center,
+        &--left {
+            @include r(1200) {
+                padding: 30px 50px 30px 100px;
+
+                svg {
+                    top: 40px;
+                    left: 20px;
+                }
+            }
+
+        
+            @include r(992) {
+                padding: 20px 30px 20px 60px;
+                width: 33.3%;
+            }
+            @include r(768){
+                padding: 10px 30px 10px 60px;
+                width: 100%;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid $mini-grey;
+                svg{
+                    top: 40px;
+                    left: 10%;
+                }
+            }
+        }
     }
 
-    &__img {
-        margin-top: 178px;
-        max-width: 640px;
-        width: 100%;
-        max-height: 264px;
-        height: 100%;
-        object-fit: cover;
+    &__title {
+        font-size: 18px;
+        line-height: 1;
+        color: $mds-grey;
     }
 
-}
+    &__text {
+        margin-top: 8px;
+        @extend %dmsans-400;
+        font-size: 16px;
+        line-height: 1.9;
+        color: $medium-grey;
+        @extend %minimal-text;
+    }
 
-.slick-dots {
-    display: flex;
-    justify-content: center;
+    &__info {
+        position: relative;
+        max-width: 230px;
 
-    li {
-        button {
-            width: 30px;
-            height: 30px;
-            font-size: 12px;
-            background-color: $vls-orange;
-            color: $shade-blue;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: $light-grey;
             border-radius: 50%;
-            margin-right: 11px;
-            transition: background-color 0.3s, color 0.3s;
+        }
 
-            &:hover {
-                background-color: white;
-                color: $ds-blue;
+        &--sup {
+            max-width: 200px;
+            margin-left: 20px;
+            @include r(768){
+                max-width: 230px;
+            }
+
+            &::before {
+                top: 35px;
+                left: -45px;
+
+                @include r(1200) {
+                    top: 42px;
+                    left: -70px;
+                }
+                @include r(992) {
+                    top: 54px;
+                    left: -30px;
+                }
             }
         }
 
-        &.slick-active {
-            button {
-                background-color: white;
+        &--ship {
+            margin-left: 30px;
+
+            &::before {
+                top: 17px;
+                left: -43px;
+
+                @include r(1200) {
+                    top: 27px;
+                    left: -70px;
+                }
+                @include r(992) {
+                    top: 38px;
+                    left: -31px;
+                }
+            }
+        }
+
+        &--pay {
+            margin-left: 37px;
+
+            &::before {
+                top: 34px;
+                left: -54px;
+
+                @include r(1200) {
+                    top: 42px;
+                    left: -81px;
+                }
+                @include r(992) {
+                    top: 52px;
+                    left: -41px;
+                }
+            }
+        }
+
+        &--sup,
+        &--ship,
+        &--pay {
+            @include r(768) {
+                margin-left: 20%;
+                &::before{
+                    @include r(768) {
+                        display: none;
+                    }
+                }
             }
         }
     }
+
 }
