@@ -60,8 +60,15 @@
         &--right,
         &--center,
         &--left {
-            @include r(1200) {
+            @include r(1400) {
                 padding: 30px 50px 30px 100px;
+
+                svg {
+                    top: 33px;
+                    left: 49px;
+                }
+            }
+            @include r(1200) {
 
                 svg {
                     top: 40px;

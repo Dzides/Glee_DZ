@@ -4,13 +4,33 @@
     max-width: 870px;
     width: 100%;
     min-height: 390px;
-    padding: 0 10px;
     background-color: $light-brown;
+
+    &:first-child {
+        margin-right: 15px;
+    }
+
+    @include r(1200) {
+        min-height: 300px;
+    }
+
+    @include r(768) {
+        margin-bottom: 50px;
+
+        &:first-child {
+            margin-right: 0;
+        }
+    }
 
     &__images {
         position: relative;
-        max-width: 370px;
         width: 100%;
+
+        @include r(768) {
+            display: inline-block;
+            margin: 0 auto;
+
+        }
 
         img {
             position: absolute;
@@ -20,6 +40,23 @@
             max-height: 400px;
             height: 100%;
             object-fit: cover;
+
+            @include r(1200) {
+                bottom: 70px;
+                right: -10px;
+                max-height: 300px;
+            }
+
+            @include r(992) {
+                position: relative;
+                display: block;
+                margin: 0 auto;
+            }
+
+            @include r(768) {
+                bottom: 0;
+                padding: 20px 10px 20px 5px;
+            }
         }
 
     }
@@ -30,6 +67,15 @@
         max-width: 440px;
         padding: 80px 140px 90px 10px;
         color: $ds-blue;
+
+        @include r(1440) {
+            padding: 60px 20px 60px 10px;
+            min-width: 50%;
+        }
+
+        @include r(1200) {
+            padding: 30px 20px 30px 20px;
+        }
     }
 
     &__title,
@@ -40,6 +86,15 @@
     &__title {
         margin-bottom: 15px;
         font-size: 26px;
+
+        @include r(992) {
+            font-size: 22px;
+        }
+
+        @include r(576) {
+            font-size: 18px;
+        }
+
     }
 
     &__text {
@@ -47,6 +102,10 @@
         @extend %rubic-400;
         font-size: 16px;
         line-height: 1.5;
+
+        @include r(992) {
+            font-size: 14px;
+        }
     }
 
     &__link {
@@ -61,6 +120,17 @@
         border-radius: 5px;
         transition: background-color 0.5s;
 
+        @include r(1200) {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        @include r(576) {
+            padding: 10px 5px;
+            max-width: 120px;
+            font-size: 12px;
+        }
+
         svg {
             position: absolute;
             top: 23px;
@@ -68,6 +138,15 @@
             width: 22px;
             height: 9px;
             fill: $ds-blue;
+
+            @include r(1200) {
+                top: 13px;
+            }
+
+            @include r(576) {
+                top: 15px;
+                right: 10px;
+            }
         }
 
         &:hover {

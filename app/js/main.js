@@ -2,9 +2,9 @@ $(function () {
         $('.slider-main__items').slick({
             dots: true,
             arrows: false,
-            fade: true,
-            autoplay: true,
-            autoplaySpead: 3000
+            // fade: true,
+            // autoplay: true,
+            // autoplaySpead: 3000
         });
 
         $('.panel-mobil__link--home').on('click', function (e) {

@@ -4,18 +4,19 @@
         position: relative;
         padding: 99px 0 40px;
         background-color: $vl-orange;
-
         @include r(1200) {
             padding: 80px 0 40px;
         }
 
         @include r(992) {
+            margin-top: 44px;
             padding: 20px 0 40px;
         }
 
         @include r(768) {
             margin-top: 90px;
         }
+
         @include r(576) {
             padding: 0 0 10px;
             margin-top: 100px;
@@ -225,7 +226,7 @@
     justify-content: center;
 
     @include r(576) {
-        display: none;
+        display: none !important;
     }
 
     li {

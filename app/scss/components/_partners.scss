@@ -12,6 +12,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @include r(768){
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding-bottom: 0;
+        }
     }
 
     &__item{
@@ -19,6 +24,10 @@
            max-width: 170px;
            max-height: 85px;
            object-fit: cover;
+        }
+        @include r(768){
+            margin-left: 20px;
+            margin-bottom: 30px;
         }
     }
 

@@ -8,10 +8,17 @@
         align-items: center;
         width: 100%;
         min-height: 500px;
+        height: 100%;
         z-index: 1;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        @include r(1200) {
+            min-height: 400px;
+        }
+        @include r(576) {
+            min-height: 300px;
+        }
     }
 
     &__play {

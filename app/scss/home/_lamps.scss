@@ -1,9 +1,27 @@
 .lamps {
     padding: 90px 0 35px;
 
+    @include r(1200) {
+        padding-top: 50px;
+    }
+
+    @include r(768) {
+        padding-top: 60px;
+        padding-bottom: 0;
+        border-bottom: 1px solid rgba(67,99,114,0.15);
+    }
+
     &__items {
         display: flex;
         justify-content: space-between;
+
+        @include r(768) {
+            flex-direction: column;
+            padding: 0 10px;
+        }
+
+        @include r(576) {
+            padding: 0;
+        }
     }
 }
-

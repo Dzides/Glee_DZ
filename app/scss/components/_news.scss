@@ -1,20 +1,40 @@
 .news {
     padding: 55px 0 0;
 
+    @include r(768) {
+        padding: 50px 10px 0;
+    }
+
+    @include r(576) {
+        padding: 50px 0 0;
+    }
+
     &__top {
         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include r(576) {
+            flex-direction: column;
+        }
     }
 
     &__title {
         margin: 0;
+
+        @include r(576) {
+            margin-bottom: 20px;
+        }
     }
 
     &__link {
         font-size: 16px;
         transition: color 0.3s;
+
+        @include r(576) {
+            font-size: 18px;
+        }
 
         svg {
             width: 7px;
@@ -31,6 +51,11 @@
     &__items {
         display: flex;
         justify-content: space-between;
+
+        @include r(576) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__item {
@@ -39,6 +64,16 @@
         min-height: 420px;
         background-color: white;
 
+        &+& {
+            margin-left: 10px;
+            @include r(576){
+                margin-left: 0;
+            }
+        }
+
+        @include r(576) {
+            margin-bottom: 20px;
+        }
     }
 
     &__hidden {
@@ -67,8 +102,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 30px 30px 30px;
+        padding: 30px 30px;
         min-height: 180px;
+
+        @include r(768) {
+            padding: 30px 10px;
+        }
     }
 
     &__content {
@@ -84,31 +123,82 @@
         color: white;
         background-color: $ml-blue;
         border-radius: 13px;
+
+        @include r(576) {
+            top: -45px;
+        }
     }
 
     &__text {
+        margin-bottom: 10px;
         @extend %dmsans-500;
         font-size: 18px;
         line-height: 1.15;
         @extend %minimal-text;
 
+        @include r(768) {
+            font-size: 16px;
+        }
+
         &:hover {
             color: $vid-blue;
         }
+
+        @include r(576) {}
     }
 
     &__info {
-        display: flex;
+        display: block;
         margin-top: auto;
         padding-top: 15px;
         @extend %myriadpro-400;
         text-transform: uppercase;
         font-size: 14px;
         border-top: 1px solid $light-grey;
+
+        @include r(992) {
+            font-size: 12px;
+
+            svg {
+                display: none;
+            }
+        }
+
+        @include r(768) {
+            display: flex;
+            justify-content: space-around;
+
+            svg {
+                display: inline-flex;
+            }
+        }
+
+        @include r(576) {
+            svg {
+                position: relative;
+                top: 4px;
+            }
+        }
+
+    }
+
+    &__close {
+        @include r(768) {
+            display: none;
+        }
+
+        @include r(576) {
+            display: inline-flex;
+
+        }
     }
 
     &__data {
         margin-right: 30px;
+
+        @include r(992) {
+            margin-right: 15px;
+        }
 
         svg {
             width: 20px;
@@ -122,6 +212,10 @@
             width: 20px;
             height: 20px;
             margin-right: 5px;
+
+            @include r(992) {
+                margin-right: 7px;
+            }
         }
     }
 

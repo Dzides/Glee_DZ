@@ -1,7 +1,7 @@
 .design {
     padding: 60px 0 60px;
     text-align: center;
-
+    
     @include r(768) {
         padding: 40px 10px 50px;
         border-bottom: 1px solid rgba(67, 99, 114, 0.15);
