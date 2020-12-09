@@ -2,12 +2,12 @@ $(function () {
         $('.slider-main__items').slick({
             dots: true,
             arrows: false,
-            // fade: true,
-            // autoplay: true,
-            // autoplaySpead: 3000
+            fade: true,
+            autoplay: true,
+            autoplaySpead: 3000
         });
 
-        $('.menu a, .panel-mobil__link').on('click', function (e) {
+        $('.panel-mobil__link--home').on('click', function (e) {
             e.preventDefault();
             var id = $(this).attr('href'),
               top = $(id).offset().top;

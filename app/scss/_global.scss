@@ -32,7 +32,8 @@ body {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
-    @include r(768){
+
+    @include r(768) {
         padding: 0;
     }
 }
@@ -62,21 +63,41 @@ body {
 .title {
     font-size: 36px;
     margin-bottom: 25px;
+
+    @include r(768) {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    @include r(576) {
+        font-size: 28px;
+    }
 }
 
 .text {
     @extend %rubic-400;
     font-size: 16px;
     line-height: 1.9;
-}
+  }
 
 .filters {
     margin-bottom: 80px;
+
+    @include r(768) {
+        margin-bottom: 50px;
+    }
 
     &__btn {
         margin: 0 14px;
         font-size: 16px;
         color: $grey;
+
+        @include r(768) {
+            font-size: 14px;
+        }
+
+        @include r(576) {
+            margin: 0 5px;
+        }
 
         &:focus {
             color: $medium-grey;

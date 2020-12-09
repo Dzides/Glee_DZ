@@ -5,16 +5,20 @@
         padding: 99px 0 40px;
         background-color: $vl-orange;
 
-        @media (max-width: 1200px) {
+        @include r(1200) {
             padding: 80px 0 40px;
         }
 
-        @media (max-width: 992px) {
+        @include r(992) {
             padding: 20px 0 40px;
         }
 
-        @media (max-width: 576px) {
+        @include r(768) {
+            margin-top: 90px;
+        }
+        @include r(576) {
             padding: 0 0 10px;
+            margin-top: 100px;
         }
 
         &::before {
@@ -29,19 +33,19 @@
             border-radius: 50%;
             background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 31.64%, rgba(255, 255, 255, 0.222586) 74.35%, rgba(255, 255, 255, 0) 99.87%);
 
-            @media (max-width: 1650px) {
+            @include r(1650) {
                 right: 5%;
             }
 
-            @media (max-width: 1450px) {
+            @include r(1450) {
                 right: 2%;
             }
 
-            @media (max-width: 1300px) {
+            @include r(1300) {
                 right: 1%;
             }
 
-            @media (max-width: 1200px) {
+            @include r(1200) {
                 display: none;
             }
         }
@@ -51,12 +55,12 @@
     &__item {
         display: flex !important;
 
-        @media (max-width: 1200px) {
+        @include r(1200) {
             justify-content: center;
             padding: 0 20px;
         }
 
-        @media (max-width: 992px) {
+        @include r(992) {
             position: relative;
             background: url(../images/slider_home/slide.png);
             background-repeat: no-repeat;
@@ -64,7 +68,7 @@
             background-position: center;
         }
 
-        @media (max-width: 768px) {
+        @include r(768) {
             padding: 0;
             background-size: 90%;
         }
@@ -76,17 +80,17 @@
         max-width: 470px;
         @extend %rubic-500;
 
-        @media (max-width: 1200px) {
+        @include r(1200) {
             padding: 20px 0 50px;
             margin-right: 20px;
         }
 
-        @media (max-width: 992px) {
+        @include r(992) {
             margin-right: 0;
             text-align: center;
         }
 
-        @media (max-width: 576px) {
+        @include r(576) {
             padding: 20px 0 20px;
         }
     }
@@ -95,7 +99,7 @@
     &__text {
         @extend %minimal-text;
 
-        @media (max-width: 992px) {
+        @include r(992) {
             -webkit-line-clamp: 2;
         }
     }
@@ -107,24 +111,24 @@
         text-transform: uppercase;
         color: $ds-blue;
 
-        @media (max-width: 1200px) {
+        @include r(1200) {
             margin-bottom: 15px;
             font-size: 52px;
         }
 
-        @media (max-width: 992px) {
+        @include r(992) {
             margin-bottom: 20px;
             font-size: 48px;
             text-shadow: 2px 2px 2px #fff;
         }
 
-        @media (max-width: 768px) {
+        @include r(768) {
             margin-bottom: 50px;
             font-size: 38px;
             text-shadow: 1px 2px 2px #fff;
         }
 
-        @media (max-width: 576px) {
+        @include r(576) {
             font-size: 24px;
         }
     }
@@ -136,21 +140,21 @@
         line-height: 1.7;
         color: $md-blue;
 
-        @media (max-width: 1200px) {
+        @include r(1200) {
             margin-bottom: 46px;
             font-size: 16px;
         }
 
-        @media (max-width: 992px) {
+        @include r(992) {
             text-shadow: 1px 1px 1px #fff;
         }
 
-        @media (max-width: 768px) {
+        @include r(768) {
             margin-bottom: 100px;
             font-size: 14px;
         }
 
-        @media (max-width: 576px) {
+        @include r(576) {
             margin-bottom: 120px;
         }
     }
@@ -163,11 +167,11 @@
         background-color: $ml-blue;
         transition: color 0.3s;
 
-        @media (max-width: 1200px) {
+        @include r(1200) {
             padding: 15px 100px 15px 30px;
         }
 
-        @media (max-width: 576px) {
+        @include r(576) {
             font-size: 18px;
             padding: 5px 100px 5px 10px;
         }
@@ -180,11 +184,11 @@
             top: 27px;
             right: 19px;
 
-            @media (max-width: 1200px) {
+            @include r(1200) {
                 top: 20px;
             }
 
-            @media (max-width: 576px) {
+            @include r(576) {
                 top: 10px;
             }
         }
@@ -203,13 +207,13 @@
         height: 100%;
         object-fit: cover;
 
-        @media (max-width: 1200px) {
+        @include r(1200) {
             margin-top: 0;
             max-width: 60%;
             max-height: 300px;
         }
 
-        @media (max-width: 992px) {
+        @include r(992) {
             display: none !important;
         }
     }
@@ -220,7 +224,7 @@
     display: flex;
     justify-content: center;
 
-    @media (max-width: 576px) {
+    @include r(576) {
         display: none;
     }
 

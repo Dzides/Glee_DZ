@@ -5,9 +5,13 @@
     }
 
     &__items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
         align-items: center;
+
+        @include r(768) {
+            display: block;
+        }
+
     }
 
     &__item {
@@ -17,7 +21,6 @@
             position: absolute;
             z-index: 1;
             fill: $ml-blue;
-
         }
 
         &--right {
@@ -54,6 +57,37 @@
             }
         }
 
+        &--right,
+        &--center,
+        &--left {
+            @include r(1200) {
+                padding: 30px 50px 30px 100px;
+
+                svg {
+                    top: 40px;
+                    left: 20px;
+                }
+            }
+
+
+            @include r(992) {
+                padding: 20px 30px 20px 60px;
+                width: 33.3%;
+            }
+
+            @include r(768) {
+                padding: 10px 30px 10px 60px;
+                width: 100%;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid $mini-grey;
+
+                svg {
+                    top: 40px;
+                    left: 10%;
+                }
+            }
+        }
     }
 
     &__title {
@@ -88,9 +122,23 @@
             max-width: 200px;
             margin-left: 20px;
 
+            @include r(768) {
+                max-width: 230px;
+            }
+
             &::before {
                 top: 35px;
                 left: -45px;
+
+                @include r(1200) {
+                    top: 42px;
+                    left: -70px;
+                }
+
+                @include r(992) {
+                    top: 54px;
+                    left: -30px;
+                }
             }
         }
 
@@ -100,6 +148,16 @@
             &::before {
                 top: 17px;
                 left: -43px;
+
+                @include r(1200) {
+                    top: 27px;
+                    left: -70px;
+                }
+
+                @include r(992) {
+                    top: 38px;
+                    left: -31px;
+                }
             }
         }
 
@@ -109,6 +167,30 @@
             &::before {
                 top: 34px;
                 left: -54px;
+
+                @include r(1200) {
+                    top: 42px;
+                    left: -81px;
+                }
+
+                @include r(992) {
+                    top: 52px;
+                    left: -41px;
+                }
+            }
+        }
+
+        &--sup,
+        &--ship,
+        &--pay {
+            @include r(768) {
+                margin-left: 20%;
+
+                &::before {
+                    @include r(768) {
+                        display: none;
+                    }
+                }
             }
         }
     }

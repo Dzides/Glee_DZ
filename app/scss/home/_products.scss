@@ -2,14 +2,28 @@
     padding: 68px 0 93px;
     text-align: center;
 
+    @include r(768) {
+        padding: 40px 10px 60px;
+    }
+
     &__cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 40px 30px;
+
+        @include r(992) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px 20px;
+        }
+
+        @include r(768) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 
     .mixitup-control-active {
         color: $light-grey;
     }
 }
-

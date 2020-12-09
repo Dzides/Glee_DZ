@@ -1,16 +1,20 @@
 .header {
     padding: 50px 0 43px;
 
-    @media (max-width: 992px) {
+    @include r(992) {
         padding: 20px 0 20px;
     } 
-    @media (max-width: 768px) {
+    @include r(768) {
+        position: fixed;
         padding: 20px 15px 20px;
+        width: 100%;
+        z-index: 10;
+        background-color: white;
     }
-    @media (max-width: 576px) {
-        padding: 10px 15px 20px;
+    @include r(576) {
+        padding: 10px 15px 10px;
     }
-
+    
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -19,7 +23,7 @@
 
     &__btn {
 
-        @media (max-width: 768px) {
+        @include r(768) {
             display: block;
         }
 
@@ -33,7 +37,7 @@
                 fill: $ml-blue;
             }
 
-            @media (max-width: 576px) {
+            @include r(576) {
                 width: 40px;
                 height: 40px;
             }
@@ -41,7 +45,7 @@
     }
 
     &__search {
-        @media (max-width: 576px) {
+        @include r(576) {
             margin: 5px 5px 10px;
             display: flex;
             align-items: center;
@@ -98,11 +102,11 @@
     @extend %rubic-500;
     font-size: 15px;
 
-    @media (max-width: 1200px) {
+   @include r(1200) {
         margin-left: 0;
     }
 
-    @media (max-width: 992px) {
+    @include r(992) {
         position: absolute;
         left: 0;
         right: 0;
@@ -110,21 +114,23 @@
         background-color: $vr-blue;
     }
 
-    @media (max-width: 768px) {
-        // display: none;
+    @include r(768) {
         top: 110px;
+    }
+    @include r(576) {
+        top: 100px;
     }
 
     &__list {
         display: flex;
 
-        @media (max-width: 992px) {
+        @include r(992) {
             width: 100%;
             justify-content: space-around;
             text-transform: uppercase;
         }
 
-        @media (max-width: 768px) {
+        @include r(768) {
             position: absolute;
             top: -20px;
             background-color: $vr-blue;
@@ -139,24 +145,24 @@
             }
         }
 
-        @media (max-width: 576px) {
+        @include r(576) {
             top: 8px;
         }
     }
 
     &__item {
-        @media (max-width: 768px) {
+        @include r(768) {
             border-bottom: 1px solid $ml-blue;
         }
 
         &+& {
             margin-left: 35px;
 
-            @media (max-width: 1200px) {
+           @include r(1200) {
                 margin-left: 15px;
             }
 
-            @media (max-width: 992px) {
+            @include r(992) {
                 margin-left: 0;
             }
         }
@@ -168,7 +174,7 @@
         color: $md-blue;
         transition: background-color 0.3s, color 0.3s;
 
-        @media (max-width: 992px) {
+        @include r(992) {
             display: block;
             padding: 15px 15px;
         }
@@ -177,14 +183,14 @@
         &:hover {
             color: $ml-blue;
 
-            @media (max-width: 768px) {
+            @include r(768) {
                 color: white;
                 background-color: $ml-blue;
             }
         }
 
         &--focus {
-            @media (max-width: 768px) {
+            @include r(768) {
                 display: none;
             }
         }
@@ -197,7 +203,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 576px) {
+    @include r(576) {
         display: none;
     }
 
@@ -240,7 +246,7 @@
         &--search {
             margin-right: 21px;
 
-            @media (max-width: 768px) {
+            @include r(768) {
                 margin-right: 0;
             }
 
@@ -254,7 +260,7 @@
         }
 
         &--cubic {
-            @media (max-width: 768px) {
+            @include r(768) {
                 display: none;
             }
 
@@ -269,7 +275,7 @@
 
         &--heart,
         &--cart {
-            @media (max-width: 768px) {
+            @include r(768) {
                 display: none;
             }
 
@@ -281,7 +287,7 @@
         }
 
         &--heart {
-            @media (max-width: 576px) {
+            @include r(576) {
                 display: none;
             }
 
@@ -294,7 +300,7 @@
                 right: -30px;
                 background-color: $light-orange;
 
-                @media (max-width: 576px) {
+                @include r(576) {
                     display: none;
                 }
             }
@@ -313,7 +319,7 @@
         background-color: $vl-orange;
         border-radius: 25px;
 
-        @media (max-width: 768px) {
+        @include r(768) {
             display: none;
         }
     }
@@ -335,7 +341,7 @@
 }
 
 .panel-mobil {
-    @media (max-width: 768px) {
+    @include r(768) {
         padding: 30px 0;
         align-items: center;
         display: flex;
@@ -366,7 +372,7 @@
                 fill: $md-blue;
                 transition: background-color 0.3s, color 0.3s, fill 0.3s;
 
-                @media (max-width: 576px) {
+                @include r(576) {
                     background-color: transparent;
                 }
 
@@ -378,7 +384,7 @@
                 &:hover {
                     background-color: $ml-blue;
 
-                    @media (max-width: 576px) {
+                    @include r(576) {
                         .panel-mobil__num {
                             background-color: white;
                         }
@@ -442,7 +448,7 @@
             background-color: white;
             border-radius: 50%;
 
-            @media (max-width: 576px) {
+            @include r(576) {
                 background-color: $vr-blue;
 
             }
