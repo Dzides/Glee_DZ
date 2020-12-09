@@ -13,8 +13,11 @@
 
     &__images {
         position: absolute;
-        z-index: -1;
+        max-width: 100%;
         object-fit: cover;
+        z-index: -1;
+
+        @include r(768) {}
 
         &--one {
             bottom: 38px;
@@ -29,16 +32,33 @@
         &--three {
             top: 54px;
             right: 58px;
+
+            @include r(1200) {
+                top: 75px;
+            }
         }
 
         &--four {
             top: 80px;
             right: -38px;
+
+            @include r(1200) {
+                top: 85px;
+            }
         }
 
         &--five {
             top: 36px;
             right: 33px;
+
+            @include r(1200) {
+                top: 65px;
+                right: 25px;
+            }
+
+            @include r(992) {
+                right: 10px;
+            }
         }
 
         &--six {
@@ -52,7 +72,16 @@
     }
 
     &__info {
-        display: inline-block;
+        @include r(1200) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        @include r(576) {
+            min-height: 210px;
+        }
     }
 
     &__title,
@@ -64,12 +93,20 @@
         max-width: 180px;
         margin-bottom: 12px;
         font-size: 20px;
+
+        @include r(576) {
+            font-size: 18px;
+        }
     }
 
     &__variant {
         width: 90px;
         color: $ml-blue;
         -webkit-line-clamp: 2;
+
+        @include r(1200) {
+            margin-bottom: 20px;
+        }
     }
 
     &:hover {

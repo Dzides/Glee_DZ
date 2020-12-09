@@ -2,6 +2,11 @@
     padding: 60px 0 60px;
     text-align: center;
 
+    @include r(768) {
+        padding: 40px 10px 50px;
+        border-bottom: 1px solid rgba(67, 99, 114, 0.15);
+    }
+
     &__title {
         margin-bottom: 20px;
     }
@@ -10,6 +15,17 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 35px 30px;
+
+        @include r(768) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 25px 20px;
+        }
+
+        @include r(576) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .mixitup-control-active {
@@ -17,4 +33,3 @@
     }
 
 }
-

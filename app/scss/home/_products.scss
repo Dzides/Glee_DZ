@@ -4,6 +4,7 @@
 
     @include r(768) {
         padding: 40px 10px 60px;
+        border-bottom: 1px solid rgba(67,99,114,0.15);
     }
 
     &__cards {
