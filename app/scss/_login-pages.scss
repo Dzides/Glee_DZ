@@ -1,11 +1,26 @@
-.modal {
+.module {
     padding: 117px 0 136px;
 
+    @include r(992) {
+        padding: 100px 0;
+    }
+
+    @include r(768) {
+        padding: 80px 0;
+    }
+
+    @include r(576) {
+        padding: 60px 0;
+    }
 
     &__block {
         margin: 0 auto;
         max-width: 470px;
         width: 100%;
+
+        @include r(576) {
+            width: 90%;
+        }
     }
 
     &__text {

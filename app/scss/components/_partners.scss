@@ -29,6 +29,12 @@
             max-width: 170px;
             max-height: 85px;
             object-fit: cover;
+            @include r(768) {
+                max-width: 80%;
+            }
+            @include r(576) {
+                max-width: 70%;
+            }
         }
 
         &+& {
@@ -36,7 +42,7 @@
                 margin-left: 30px;
             }
             @include r(576) {
-                margin-left: 0;
+                margin-left: 15px;
             }
         }
         @include r(768) {
@@ -49,8 +55,10 @@
 
 .partners-login {
     margin-top: 0;
-    position: relative;
     padding: 70px 0 70px;
     min-height: 250px;
     background-color: $slb-orange;
+    @include r(768) {
+        padding: 70px 10px 20px;
+    }
 }

@@ -2,11 +2,27 @@
     padding-top: 113px;
     color: $ds-blue;
 
+    @include r(992) {
+        padding: 80px 15px 0;
+    }
+
+    @include r(768) {
+        padding: 60px 20px 0;
+    }
+
+    @include r(576) {
+        padding: 40px 20px 0;
+    }
+
     &__content {
         h2 {
             margin-bottom: 22px;
             @extend %rubic-500;
             font-size: 24px;
+
+            @include r(992) {
+                text-align: center;
+            }
         }
 
         ol {
@@ -14,6 +30,15 @@
             display: block;
             list-style-type: none;
             counter-reset: item;
+
+            @include r(992) {
+                margin-bottom: 40px;
+            }
+
+            @include r(768) {
+                margin-bottom: 30px;
+            }
+
         }
 
         li,
@@ -51,6 +76,14 @@
 
         p {
             margin-bottom: 52px;
+
+            @include r(992) {
+                margin-bottom: 40px;
+            }
+
+            @include r(768) {
+                margin-bottom: 30px;
+            }
         }
 
     }
