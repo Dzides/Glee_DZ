@@ -3,18 +3,20 @@
 
     @include r(992) {
         padding: 20px 0 20px;
-    } 
+    }
+
     @include r(768) {
         position: fixed;
-        padding: 20px 15px 20px;
+        padding: 20px 15px 15px;
         width: 100%;
         z-index: 10;
         background-color: white;
     }
+
     @include r(576) {
         padding: 10px 15px 10px;
     }
-    
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -22,20 +24,21 @@
     }
 
     &__btn {
-
         @include r(768) {
             display: block;
         }
+
+        &--active {
+                   svg{
+                       fill: $ml-blue !important;
+                   }
+       }
 
         svg {
             width: 50px;
             height: 50px;
             fill: $md-blue;
             transition: fill 0.3s;
-
-            &:hover {
-                fill: $ml-blue;
-            }
 
             @include r(576) {
                 width: 40px;
@@ -102,7 +105,7 @@
     @extend %rubic-500;
     font-size: 15px;
 
-   @include r(1200) {
+    @include r(1200) {
         margin-left: 0;
     }
 
@@ -115,10 +118,11 @@
     }
 
     @include r(768) {
-        top: 110px;
-    }
-    @include r(576) {
         top: 100px;
+    }
+
+    @include r(576) {
+        top: 95px;
     }
 
     &__list {
@@ -151,19 +155,20 @@
     }
 
     &__item {
-        @include r(768) {
-            border-bottom: 1px solid $ml-blue;
-        }
 
         &+& {
             margin-left: 35px;
 
-           @include r(1200) {
+            @include r(1200) {
                 margin-left: 15px;
             }
 
             @include r(992) {
                 margin-left: 0;
+            }
+
+            @include r(768) {
+                border-bottom: 1px solid $ml-blue;
             }
         }
     }
@@ -187,6 +192,13 @@
                 color: white;
                 background-color: $ml-blue;
             }
+        }
+
+        &--bord{
+            @include r(768){
+                 border-top: 1px solid $ml-blue;
+            }
+           
         }
 
         &--focus {
@@ -381,19 +393,19 @@
                     fill: $ds-blue;
                 }
 
-                &:hover {
-                    background-color: $ml-blue;
+                // &:hover {
+                //     background-color: $ml-blue;
 
-                    @include r(576) {
-                        .panel-mobil__num {
-                            background-color: white;
-                        }
-                    }
+                //     @include r(576) {
+                //         .panel-mobil__num {
+                //             background-color: white;
+                //         }
+                //     }
 
-                    svg {
-                        fill: white;
-                    }
-                }
+                //     svg {
+                //         fill: white;
+                //     }
+                // }
             }
 
             &--search {

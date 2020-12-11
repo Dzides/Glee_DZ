@@ -2,6 +2,21 @@
     padding: 32px 0 28px;
     background-color: $vr-blue;
 
+    @include r(992) {
+        margin-top: 55px;
+        padding: 25px 0 22px;
+    }
+
+    @include r(768) {
+        margin-top: 90px;
+        padding: 15px 0 12px;
+    }
+
+    @include r(576) {
+        margin-top: 108px;
+        padding: 10px 0 8px;
+    }
+
     &__title {
         margin-bottom: 7px;
         @extend %rubic-300;
@@ -9,5 +24,18 @@
         line-height: 1;
         color: $bcs-blue;
         text-align: center;
+
+        @include r(1200) {
+            font-size: 34px;
+        }
+
+        @include r(768) {
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        @include r(576) {
+            font-size: 28px;
+        }
     }
 }

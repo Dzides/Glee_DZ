@@ -6,7 +6,7 @@
     }
 
     @include r(576) {
-        padding: 50px 0 0;
+        padding: 50px 10px 0;
     }
 
     &__top {
@@ -15,7 +15,7 @@
         justify-content: space-between;
         align-items: center;
 
-        @include r(576) {
+        @include r(768) {
             flex-direction: column;
         }
     }
@@ -23,7 +23,7 @@
     &__title {
         margin: 0;
 
-        @include r(576) {
+        @include r(768) {
             margin-bottom: 20px;
         }
     }
@@ -52,7 +52,7 @@
         display: flex;
         justify-content: space-between;
 
-        @include r(576) {
+        @include r(768) {
             flex-direction: column;
             align-items: center;
         }
@@ -61,19 +61,24 @@
     &__item {
         max-width: 370px;
         width: 100%;
-        min-height: 420px;
+        max-height: 420px;
+        height: 100%;
         background-color: white;
 
         &+& {
             margin-left: 10px;
-            @include r(576){
+
+            @include r(768) {
                 margin-left: 0;
             }
         }
 
-        @include r(576) {
-            margin-bottom: 20px;
+        &:not(:first-child) {
+            @include r(768) {
+                margin-top: 20px;
+            }
         }
+
     }
 
     &__hidden {
@@ -105,7 +110,7 @@
         padding: 30px 30px;
         min-height: 180px;
 
-        @include r(768) {
+        @include r(992) {
             padding: 30px 10px;
         }
     }
@@ -116,7 +121,7 @@
 
     &__btn {
         position: absolute;
-        top: -50px;
+        top: -44px;
         padding: 5px 30px;
         @extend %poppins-700;
         text-transform: uppercase;
@@ -144,7 +149,6 @@
             color: $vid-blue;
         }
 
-        @include r(576) {}
     }
 
     &__info {
@@ -156,15 +160,12 @@
         font-size: 14px;
         border-top: 1px solid $light-grey;
 
-        @include r(992) {
+        @include r(1200) {
             font-size: 12px;
 
-            svg {
-                display: none;
-            }
         }
 
-        @include r(768) {
+        @include r(992) {
             display: flex;
             justify-content: space-around;
 
@@ -182,21 +183,10 @@
 
     }
 
-    &__close {
-        @include r(768) {
-            display: none;
-        }
-
-        @include r(576) {
-            display: inline-flex;
-
-        }
-    }
-
     &__data {
         margin-right: 30px;
 
-        @include r(992) {
+        @include r(810) {
             margin-right: 15px;
         }
 

@@ -8,14 +8,17 @@
         justify-content: space-between;
         padding: 93px 0 61px;
         border-bottom: 1px solid #dae4e9;
-        @include r(1200){
+
+        @include r(1200) {
             flex-wrap: wrap;
             justify-content: space-around;
         }
-        @include r(768){
+
+        @include r(768) {
             padding: 50px 30px 0;
         }
-        @include r(576){
+
+        @include r(576) {
             padding: 50px 10px 0;
         }
     }
@@ -26,25 +29,28 @@
         padding-right: 100px;
         padding-top: 17px;
 
-        @include r(1200){
+        @include r(1200) {
             margin-bottom: 50px;
             padding-right: 0;
             max-width: 250px;
             flex-wrap: wrap;
             text-align: center;
         }
-        @include r(768){
+
+        @include r(768) {
             margin-bottom: 20px;
             text-align: start;
         }
-        @include r(576){
+
+        @include r(576) {
             text-align: center;
         }
 
         &--first {
             padding-top: 0;
             padding-right: 80px;
-            @include r(1200){
+
+            @include r(1200) {
                 padding-right: 20px;
             }
         }
@@ -76,16 +82,21 @@
 
     &__link {
         color: $grey;
+
+        &--active {
+            color: $dark-grey;
+        }
     }
 
     &__item {
         margin-bottom: 14px;
 
         &--bottom {
-            
+
             margin-bottom: 0;
             position: relative;
-            &+&{
+
+            &+& {
                 margin-left: 31px;
             }
 
@@ -146,12 +157,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
-        @include r(768){
-            padding: 10px 10px 90px ;
-             font-size: 12px;
+
+        @include r(768) {
+            padding: 10px 10px 90px;
+            font-size: 12px;
         }
-        @include r(576){
+
+        @include r(576) {
             flex-direction: column;
             justify-content: center;
         }
@@ -184,8 +196,9 @@
             color: $dark-grey;
         }
     }
-    &__copy{
-        @include r(576){
+
+    &__copy {
+        @include r(576) {
             padding-top: 10px;
             margin-bottom: 20px;
         }
@@ -193,11 +206,11 @@
 
 }
 
-.footer-login{
+.footer-login {
     padding-top: 51px;
 }
 
-.footer-about{
+.footer-about {
     padding-top: 80px;
 }
 

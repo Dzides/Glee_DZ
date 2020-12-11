@@ -1,5 +1,5 @@
 .partners {
-    margin-top: -180px;
+    margin-top: -170px;
     padding: 270px 0 70px;
     min-height: 426px;
     right: 0;
@@ -8,32 +8,46 @@
     background-color: $slb-orange;
     z-index: -1;
 
+    @include r(768) {
+        padding: 270px 10px 20px;
+    }
+
+
     &__list {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        @include r(768){
+
+        @include r(768) {
             flex-wrap: wrap;
-            flex-direction: row;
             padding-bottom: 0;
         }
     }
 
-    &__item{
-        img{
-           max-width: 170px;
-           max-height: 85px;
-           object-fit: cover;
+    &__item {
+        img {
+            max-width: 170px;
+            max-height: 85px;
+            object-fit: cover;
         }
-        @include r(768){
-            margin-left: 20px;
-            margin-bottom: 30px;
+
+        &+& {
+            @include r(768) {
+                margin-left: 30px;
+            }
+            @include r(576) {
+                margin-left: 0;
+            }
         }
+        @include r(768) {
+            margin-bottom: 40px;
+        }
+
     }
 
 }
 
-.partners-login{
+.partners-login {
     margin-top: 0;
     position: relative;
     padding: 70px 0 70px;

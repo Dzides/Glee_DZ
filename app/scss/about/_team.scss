@@ -1,14 +1,42 @@
 .team {
     padding: 120px 0;
 
+    @include r(992) {
+        padding: 80px 0;
+    }
+
+    @include r(768) {
+        padding: 60px 10px;
+    }
+
+    @include r(576) {
+        padding: 50px 10px;
+    }
+
     &__wrap {
         display: flex;
         justify-content: space-between;
+
+        @include r(992) {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
     }
 
     &__content {
         padding-right: 80px;
         width: 33%;
+
+        @include r(1200) {
+            padding-right: 20px;
+        }
+
+        @include r(992) {
+            padding-right: 0;
+            padding-bottom: 60px;
+            width: 100%;
+        }
     }
 
     &__title {
@@ -48,6 +76,15 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-gap: 100px 30px;
+
+        @include r(992) {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
     }
 
     &__person {
@@ -61,12 +98,17 @@
         -webkit-filter: grayscale(70%);
         filter: grayscale(70%);
 
+        @include r(768) {
+            margin-bottom: 20px;
+        }
+
         &:hover {
             -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
             transform: scale(1.1);
             cursor: pointer;
         }
+
     }
 
     &__profile {

@@ -6,6 +6,16 @@
         display: flex;
         justify-content: space-around;
         text-align: center;
+
+        @include r(992) {
+            padding: 50px 0 50px;
+        }
+
+        @include r(768) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
     }
 
     &__item {
@@ -17,6 +27,21 @@
         width: 25%;
         color: $ds-blue;
         z-index: 1;
+
+        &+& {
+            @include r(1200) {
+                margin-left: 10px;
+            }
+        }
+
+        @include r(768) {
+            width: 40%;
+            margin-bottom: 40px;
+        }
+
+        @include r(576) {
+            width: 100%;
+        }
 
         svg {
             fill: $ds-blue;
@@ -35,11 +60,27 @@
             background-color: $ml-blue;
             border-radius: 50%;
             z-index: -1;
+
+            @include r(1200) {
+                display: none;
+            }
         }
     }
 
     &__title {
         font-size: 36px;
+
+        @include r(992) {
+            font-size: 32px;
+        }
+
+        @include r(768) {
+            font-size: 28px;
+        }
+
+        @include r(576) {
+            font-size: 30px;
+        }
     }
 
     &__text {
@@ -47,6 +88,18 @@
         font-size: 18px;
         @extend %minimal-text;
         -webkit-line-clamp: 2;
+
+        @include r(992) {
+            font-size: 16px;
+        }
+
+        @include r(768) {
+            font-size: 14px;
+        }
+
+        @include r(576) {
+            font-size: 16px;
+        }
     }
 
 }

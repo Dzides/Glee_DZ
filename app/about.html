@@ -10,10 +10,34 @@
 
 <body>
 
+    <div id="top"></div>
+
     <header class="header">
+        
         <div class="wrapper">
 
+            <form class="header__search" action="#">
+
+                <label class="header__look">
+                    Search the site
+                    <input class="header__write" name="search" type="text" placeholder="Search the site...">
+                </label>
+
+                <button class="header__enter" type="button">
+                    <svg>
+                        <use xlink:href="sprite.svg#search-header"></use>
+                    </svg>
+                </button>
+
+            </form>
+
             <div class="header__inner">
+
+                <button class="header__btn" type="button">
+                    <svg>
+                        <use xlink:href="sprite.svg#burger"></use>
+                    </svg>
+                </button>
 
                 <a class="header__logo" href="#">
                     <img class="header__img logo" src="images/logo.png" alt="logotype">
@@ -23,12 +47,12 @@
 
                     <ul class="menu__list">
 
-                        <li class="menu__item">
+                        <li class="menu__item menu__link--bord">
                             <a class="menu__link" href="index.html">Home +</a>
                         </li>
 
                         <li class="menu__item">
-                            <a class="menu__link menu__link--active" href="#">About</a>
+                            <span class="menu__link menu__link--active menu__link--focus">About</span>
                         </li>
 
                         <li class="menu__item">
@@ -87,6 +111,36 @@
 
             </div>
 
+            <div class="panel-mobil">
+
+                <a class="panel-mobil__link panel-mobil__link--home" href="#top">home
+                    <svg>
+                        <use xlink:href="sprite.svg#home"></use>
+                    </svg>
+                </a>
+
+                <a class="panel-mobil__link panel-mobil__link--heart" href="#">favourites
+                    <svg>
+                        <use xlink:href="sprite.svg#heart-header"></use>
+                    </svg>
+                    <span class="panel-mobil__num">7</span>
+                </a>
+
+                <a class="panel-mobil__link panel-mobil__link--cart" href="#">basket
+                    <svg>
+                        <use xlink:href="sprite.svg#cart-header"></use>
+                    </svg>
+                    <span class="panel-mobil__num">10</span>
+                </a>
+
+                <button class="panel-mobil__link panel-mobil__link--cubic" type="button">menu
+                    <svg>
+                        <use xlink:href="sprite.svg#cubic-header"></use>
+                    </svg>
+                </button>
+
+            </div>
+
         </div>
     </header>
 
@@ -102,7 +156,7 @@
                     <ul class="breadcrumbs__list">
 
                         <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link" href="#">Home</a>
+                            <a class="breadcrumbs__link" href="index.html">Home</a>
                         </li>
 
                         <li class="breadcrumbs__item">
@@ -511,19 +565,19 @@
 
                             <div class="news__info">
 
-                                <div class="news__data">
+                                <span class="news__data">
                                     <svg>
                                         <use xlink:href="sprite.svg#calendar"></use>
                                     </svg>
                                     <time datetime="2020-01-28">28 January, 2020</time>
-                                </div>
+                                </span>
 
-                                <div class="news__author">
+                                <span class="news__author">
                                     <svg>
                                         <use xlink:href="sprite.svg#admin"></use>
                                     </svg>
                                     <span>By Admin</span>
-                                </div>
+                                </span>
 
                             </div>
 
@@ -558,19 +612,19 @@
 
                             <div class="news__info">
 
-                                <div class="news__data">
+                                <span class="news__data">
                                     <svg>
                                         <use xlink:href="sprite.svg#calendar"></use>
                                     </svg>
                                     <time datetime="2020-01-28">28 January, 2020</time>
-                                </div>
+                                </span>
 
-                                <div class="news__author">
+                                <span class="news__author">
                                     <svg>
                                         <use xlink:href="sprite.svg#admin"></use>
                                     </svg>
                                     <span>By Admin</span>
-                                </div>
+                                </span>
 
                             </div>
 
@@ -605,19 +659,19 @@
 
                             <div class="news__info">
 
-                                <div class="news__data">
+                                <span class="news__data">
                                     <svg>
                                         <use xlink:href="sprite.svg#calendar"></use>
                                     </svg>
                                     <time datetime="2020-01-28">28 January, 2020</time>
-                                </div>
+                                </span>
 
-                                <div class="news__author">
+                                <span class="news__author">
                                     <svg>
                                         <use xlink:href="sprite.svg#admin"></use>
                                     </svg>
                                     <span>By Admin</span>
-                                </div>
+                                </span>
 
                             </div>
 
@@ -684,7 +738,7 @@
                     <ul class="footer__list">
 
                         <li class="footer__item">
-                            <a class="footer__link" href="about.html">
+                            <a class="footer__link footer__link--active" href="about.html">
                                 About Us
                             </a>
                         </li>
@@ -796,7 +850,7 @@
                         </li>
 
                         <li class="footer__item footer__item--bottom">
-                            <a href="#" class="footer__link footer__link--bottom">
+                            <a href="#" class="footer__link footer__link--bottom footer__link--active">
                                 About
                             </a>
                         </li>

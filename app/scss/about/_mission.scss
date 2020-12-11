@@ -1,9 +1,27 @@
 .mission {
     padding: 120px 0;
 
+    @include r(1200) {
+        padding: 80px 0;
+    }
+
+    @include r(992) {
+        padding: 30px 0;
+    }
+
+    @include r(576) {
+        padding-top: 0;
+    }
+
     &__wrap {
         display: flex;
         justify-content: space-between;
+
+        @include r(992) {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
     }
 
     &__images {
@@ -15,16 +33,43 @@
         background-position: center center;
         margin-right: 30px;
 
+        @include r(1200) {
+            margin-right: 15px;
+        }
+
+        @include r(992) {
+            max-width: 60%;
+            min-height: 350px;
+            background-position: center center;
+        }
+
+        @include r(576) {
+            max-width: 100%;
+            min-height: 350px;
+        }
     }
 
     &__content {
         padding: 83px 0 0 18px;
         color: $ds-blue;
+
+        @include r(1200) {
+            width: 50%;
+            padding-right: 15px;
+        }
+
+        @include r(992) {
+            width: 100%;
+        }
     }
 
     &__lead {
         display: flex;
         margin-bottom: 50px;
+
+        @include r(992) {
+            justify-content: center;
+        }
     }
 
     &__num {
@@ -52,6 +97,10 @@
         margin-bottom: 36px;
         line-height: 1;
         -webkit-line-clamp: 2;
+
+        @include r(992) {
+            text-align: center;
+        }
     }
 
     &__text {
@@ -63,6 +112,15 @@
         padding-top: 37px;
         display: flex;
         border-top: 2px solid rgba($bord-blue, 0.102);
+
+        @include r(992) {
+            justify-content: space-around;
+        }
+
+        @include r(576) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__list {
@@ -73,10 +131,28 @@
         font-size: 36px;
         line-height: 38px;
 
+        &+& {
+            @include r(1200) {
+                margin-left: 10px;
+            }
+
+            @include r(576) {
+                margin-left: 0;
+            }
+        }
+
         svg {
             position: absolute;
             left: 25px;
             fill: $ml-blue;
+
+            @include r(1200) {
+                left: 15px;
+            }
+
+            @include r(576) {
+                left: 0;
+            }
         }
 
         span {
@@ -96,11 +172,31 @@
             }
         }
 
+        &--mega,
+        &--award {
+            padding-left: 88px;
+
+            @include r(1200) {
+                padding-left: 78px;
+            }
+
+            @include r(576) {
+                padding-left: 53px;
+            }
+        }
+
         &--mega {
             width: 200px;
-            padding-left: 88px;
             border-right: 1px solid rgba($bord-blue, 0.102);
             border-left: 1px solid rgba($bord-blue, 0.102);
+
+            @include r(1200) {
+                border-right: none;
+            }
+
+            @include r(992) {
+                border-left: none;
+            }
 
             svg {
                 width: 44px;
@@ -109,13 +205,26 @@
         }
 
         &--award {
-            padding-left: 88px;
+            @include r(1200) {
+                border-left: 1px solid rgba($bord-blue, 0.102);
+            }
+
+            @include r(992) {
+                border-left: none;
+            }
 
             svg {
                 width: 43px;
                 height: 42px;
             }
+        }
 
+        @include r(576) {
+            width: 100%;
+            padding-left: 100px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba($bord-blue, 0.102);
         }
     }
 
