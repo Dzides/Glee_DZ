@@ -9,11 +9,34 @@
 </head>
 
 <body>
+    <div id="top"></div>
 
     <header class="header">
+        
         <div class="wrapper">
 
+            <form class="header__search" action="#">
+
+                <label class="header__look">
+                    Search the site
+                    <input class="header__write" name="search" type="text" placeholder="Search the site...">
+                </label>
+
+                <button class="header__enter" type="button">
+                    <svg>
+                        <use xlink:href="sprite.svg#search-header"></use>
+                    </svg>
+                </button>
+
+            </form>
+
             <div class="header__inner">
+
+                <button class="header__btn" type="button">
+                    <svg>
+                        <use xlink:href="sprite.svg#burger"></use>
+                    </svg>
+                </button>
 
                 <a class="header__logo" href="#">
                     <img class="header__img logo" src="images/logo.png" alt="logotype">
@@ -24,10 +47,10 @@
                     <ul class="menu__list">
 
                         <li class="menu__item">
-                            <a class="menu__link" href="index.html">Home +</a>
+                            <span class="menu__link menu__link--active menu__link--focus">Home +</span>
                         </li>
 
-                        <li class="menu__item">
+                        <li class="menu__item menu__link--bord">
                             <a class="menu__link" href="about.html">About</a>
                         </li>
 
@@ -36,7 +59,7 @@
                         </li>
 
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Pages +</a>
+                            <a class="menu__link" href="product_list-1.html">Pages +</a>
                         </li>
 
                         <li class="menu__item">
@@ -84,6 +107,36 @@
                     </button>
 
                 </div>
+
+            </div>
+
+            <div class="panel-mobil">
+
+                <a class="panel-mobil__link panel-mobil__link--home" href="#top">home
+                    <svg>
+                        <use xlink:href="sprite.svg#home"></use>
+                    </svg>
+                </a>
+
+                <a class="panel-mobil__link panel-mobil__link--heart" href="#">favourites
+                    <svg>
+                        <use xlink:href="sprite.svg#heart-header"></use>
+                    </svg>
+                    <span class="panel-mobil__num">7</span>
+                </a>
+
+                <a class="panel-mobil__link panel-mobil__link--cart" href="#">basket
+                    <svg>
+                        <use xlink:href="sprite.svg#cart-header"></use>
+                    </svg>
+                    <span class="panel-mobil__num">10</span>
+                </a>
+
+                <button class="panel-mobil__link panel-mobil__link--cubic" type="button">menu
+                    <svg>
+                        <use xlink:href="sprite.svg#cubic-header"></use>
+                    </svg>
+                </button>
 
             </div>
 

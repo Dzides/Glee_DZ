@@ -2,9 +2,19 @@
     padding-left: 30px;
     padding-bottom: 75px;
 
+    @include r(576) {
+        padding-left: 10px;
+        padding-bottom: 0;
+    }
+
     &__cards {
         padding-bottom: 33px;
         display: flex;
         flex-direction: column;
+    }
+
+    &__list {
+        margin-left: 0;
+        justify-content: start;
     }
 }

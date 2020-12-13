@@ -5,6 +5,11 @@
         justify-content: center;
         align-items: center;
         margin-left: 30px;
+
+        @include r(768) {
+            margin-left: 0;
+        }
+
     }
 
     &__item {
@@ -40,11 +45,4 @@
         }
     }
 
-}
-
-.product-view {
-    &__list {
-        margin-left: 0;
-        justify-content: start;
-    }
 }

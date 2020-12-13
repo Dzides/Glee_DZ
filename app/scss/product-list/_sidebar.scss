@@ -1,5 +1,235 @@
-@import 'components/sidebar-category';
-@import 'components/sidebar-price';
-@import 'components/sidebar-brand';
-@import 'components/sidebar-recent';
+.sidebar-category {
+   
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
 
+    &__item {
+        position: relative;
+        padding: 13px 24px 12px 15px;
+        width: 100%;
+        @extend %rubic-400;
+        font-size: 16px;
+        line-height: 1;
+        text-align: left;
+        border-radius: 5px;
+
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+
+        &--active {
+            background-color: $vr-blue;
+        }
+
+        @include hover-supported() {
+            background-color: $vr-blue;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 18px;
+            right: 20px;
+            background-image: url(../images/icon/filter_next.svg);
+            background-repeat: no-repeat;
+        }
+
+    }
+}
+
+.sidebar-price {
+    margin-bottom: 80px;
+
+    @include r(576) {
+        display: none;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        &::before {
+            left: 62px;
+        }
+    }
+
+    &__mark {
+        display: flex;
+        justify-content: space-between;
+        @extend %rubic-400;
+        font-size: 16px;
+        color: $ds-blue;
+    }
+
+    .irs--flat {
+        height: 34px;
+    }
+
+    .irs--flat .irs-line {
+        top: 8px;
+        height: 1px;
+        background-color: $ml-blue;
+        box-shadow: 0px 0px 1px 1px rgba($ml-blue, 0.6);
+        border-radius: 1px;
+    }
+
+    .irs--flat .irs-handle {
+        top: 1px;
+        width: 15px;
+        height: 15px;
+        background-color: $ml-blue;
+    }
+
+    .irs--flat .irs-handle>i:first-child {
+        display: none;
+    }
+
+    .irs--flat .irs-bar {
+        top: 8px;
+        height: 2px;
+        background-color: $ml-blue;
+        box-shadow: 0px 0px 1px 2px rgba($ml-blue, 0.6);
+    }
+
+    .irs-from,
+    .irs-to,
+    .irs-single {
+        display: none;
+    }
+
+    .irs--flat .irs-min,
+    .irs--flat .irs-max {
+        display: none;
+    }
+}
+
+.sidebar-brand {
+    margin-bottom: 50px;
+
+    @include r(576) {
+        display: none;
+    }
+
+    &__title {
+        margin-bottom: 28px;
+
+        &::before {
+            left: 72px;
+        }
+    }
+
+    &__mark {
+
+        display: block;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+
+        &--active {
+            background-color: $vr-blue;
+        }
+    }
+
+    &__enter {
+        @extend %checkbox-hidden;
+
+        &:checked+.sidebar-brand__checkbox {
+            background-color: $vr-blue;
+        }
+    }
+
+    &__checkbox {
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 0 12px 10px;
+        width: 100%;
+        @extend %rubic-400;
+        font-size: 16px;
+        line-height: 1;
+        border-radius: 5px;
+
+        @include hover-supported() {
+            background-color: $vr-blue;
+        }
+    }
+
+    &__number {
+        width: 75px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+.sidebar-recent {
+    @include r(768) {
+        display: none;
+    }
+
+    &__title {
+        margin-bottom: 35px;
+
+        &::before {
+            left: 185px;
+        }
+    }
+
+    &__card {
+        margin-bottom: 23px;
+        display: flex;
+        align-items: center;
+        @extend %rubic-400;
+        color: $black;
+    }
+
+    &__link {
+        padding: 3px;
+        margin-right: 15px;
+        display: flex;
+        width: 70px;
+        height: 70px;
+        background-color: $gr-white;
+        box-shadow: 0px 0px 1px 3px rgba($ln-grey, 0.6);
+        overflow: hidden;
+    }
+
+    &__image {
+        height: 100%;
+        display: block;
+        margin: auto;
+        object-fit: cover;
+    }
+
+    &__content {
+        max-width: 180px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    &__name,
+    &__price {
+        @extend %minimal-text-1;
+    }
+
+    &__name,
+    .sidebar-star {
+        margin-bottom: 5px;
+    }
+
+    &__price {
+        font-size: 15px;
+    }
+
+    .jq-ry-container {
+        padding: 0;
+
+    }
+}
