@@ -1,0 +1,101 @@
+.view-card {
+    margin-bottom: 40px;
+    display: flex;
+    @extend %rubic-400;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 370px;
+        width: 100%;
+        min-height: 500px;
+        background-color: $gr-white;
+        box-shadow: 0px 0px 1px 3px rgba($ln-grey, 0.6);
+    }
+
+    &__image {
+        max-height: 500px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        margin-left: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title,
+    &__price {
+        color: $black;
+    }
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    &__star {
+        margin-bottom: 30px;
+    }
+
+    &__price {
+        font-size: 30px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-size: 16px;
+        color: $ds-blue;
+        line-height: 1.9;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        width: 48%;
+        font-size: 15px;
+        line-height: 2;
+        text-transform: uppercase;
+        color: white;
+        background-color: $ml-blue;
+        border-radius: 5px;
+
+        @include hover-supported() {
+            background-color: $ds-blue;
+        }
+    }
+
+    &__list {
+        margin-left: 0;
+        justify-content: start;
+    }
+
+    &__icon {
+        margin-right: 12px;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+
+        background-color: white;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+        svg {
+            fill: $ml-blue;
+        }
+
+        @include hover-supported() {
+            background-color: $ml-blue;
+
+            svg {
+                fill: white;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,42 @@
+.sidebar-category {
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        position: relative;
+        padding: 13px 24px 12px 15px;
+        width: 100%;
+        @extend %rubic-400;
+        font-size: 16px;
+        line-height: 1;
+        text-align: left;
+        border-radius: 5px;
+
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+
+        &--active {
+            background-color: $vr-blue;
+        }
+
+        @include hover-supported() {
+            background-color: $vr-blue;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 18px;
+            right: 20px;
+            background-image: url(../images/icon/filter_next.svg);
+            background-repeat: no-repeat;
+        }
+
+    }
+}

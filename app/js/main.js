@@ -24,6 +24,14 @@ $(function () {
       normalFill: "#d6d6d6",
       ratedFill: "#ffcc00" 
     });
+
+    $(".view-card__star").rateYo({
+      readOnly: true,
+      starWidth: "20px",
+      spacing: "10px",
+      normalFill: "#d6d6d6",
+      ratedFill: "#ffcc00" 
+    });
    
   });
 

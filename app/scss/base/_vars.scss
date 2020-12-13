@@ -136,6 +136,8 @@ $black: #333333;
   }
 }
 
+// @include hover-supported()
+
 @mixin r($width) {
     @media only screen and (max-width: $width+ "px") {
       @content;

@@ -1,0 +1,50 @@
+.pagination {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    &__item {
+        &+& {
+            margin-left: 15px;
+        }
+
+    }
+
+    &__link {
+        min-width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @extend %rubic-400;
+        font-size: 16px;
+        color: $ds-blue;
+        border: 1px solid $ml-blue;
+
+        @include hover-supported() {
+            background-color: $ml-blue;
+            color: white;
+        }
+
+        &--active {
+            background-color: $ml-blue;
+            color: white;
+        }
+
+        &--arrow {
+            padding: 0 20px;
+        }
+    }
+
+}
+
+.product-view {
+    &__list {
+        margin-left: 0;
+        justify-content: start;
+    }
+}

@@ -1,0 +1,10 @@
+.product-view {
+    padding-left: 30px;
+    padding-bottom: 75px;
+
+    &__cards {
+        padding-bottom: 33px;
+        display: flex;
+        flex-direction: column;
+    }
+}
