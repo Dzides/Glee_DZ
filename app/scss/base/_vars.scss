@@ -28,6 +28,11 @@ $min-grey: #f8f8f8;
 $soc-grey: #888888;
 $rad-grey: #f6f6f6;
 $lt-grey: #4c4c4c;
+$ln-grey: #f2f2f2;
+
+$gr-white: #fefefe;
+
+$black: #333333;
 
 
 %dmsans-400 {
@@ -101,6 +106,34 @@ $lt-grey: #4c4c4c;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+%minimal-text-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+%minimal-text-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+%checkbox-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
+
+@mixin hover-supported {    
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
 }
 
 @mixin r($width) {
