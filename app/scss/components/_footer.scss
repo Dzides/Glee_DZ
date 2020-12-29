@@ -93,8 +93,8 @@
 
         &--bottom {
 
-            margin-bottom: 0;
-            position: relative;
+            // margin-bottom: 0;
+            // position: relative;
 
             &+& {
                 margin-left: 31px;
@@ -173,6 +173,12 @@
         &--bottom {
             display: flex;
             justify-content: space-between;
+
+            & .footer__item {
+                margin-bottom: 0;
+                position: relative;
+            }
+
         }
     }
 
@@ -217,3 +223,4 @@
 .footer-terms {
     padding-top: 87px;
 }
+

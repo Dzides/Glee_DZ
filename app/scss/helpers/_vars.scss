@@ -101,6 +101,15 @@ $black: #333333;
     z-index: 1;
 }
 
+@mixin min-text ($line){
+    display: -webkit-box;
+    -webkit-line-clamp: ($line);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// @include min-text (2)
+
 %minimal-text {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -138,7 +147,9 @@ $black: #333333;
     }
 }
 
-// @include hover-supported()
+// @include hover-supported() {
+//     background-color: white;
+// }
 
 @mixin r($width) {
     @media only screen and (max-width: $width+ "px") {

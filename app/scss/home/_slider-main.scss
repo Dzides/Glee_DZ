@@ -9,17 +9,12 @@
         }
 
         @include r(992) {
-            margin-top: 44px;
+            margin-top:53px;
             padding: 20px 0 40px;
-        }
-
-        @include r(768) {
-            margin-top: 90px;
         }
 
         @include r(576) {
             padding: 0 0 10px;
-            margin-top: 100px;
         }
 
         &::before {
@@ -88,6 +83,7 @@
 
         @include r(992) {
             margin-right: 0;
+            padding: 40px 0 50px;
             text-align: center;
         }
 

@@ -1,14 +1,14 @@
-@import 'base/vars';
-@import 'base/fonts';
-@import 'base/reset';
-@import 'base/libs';
-@import 'base/global';
+@import 'helpers/vars';
+@import 'helpers/fonts';
+@import 'helpers/reset';
+@import 'helpers/libs';
+@import 'helpers/global';
 
 @import 'components/header';
 
 @import 'pages/home-pages';
 
-@import 'components/card-products';
+@import 'components/card-product';
 
 @import 'components/card-lamps';
 
@@ -31,4 +31,5 @@
 @import 'pages/terms-pages';
 
 @import 'pages/product-lists';
+
 

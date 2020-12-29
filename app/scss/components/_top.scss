@@ -4,16 +4,16 @@
 
     @include r(992) {
         margin-top: 55px;
-        padding: 25px 0 22px;
+        padding: 5px 0 5px;
     }
 
     @include r(768) {
-        margin-top: 90px;
+        margin-top: 70px;
         padding: 15px 0 12px;
     }
 
     @include r(576) {
-        margin-top: 110px;
+        margin-top: 50px;
         padding: 10px 0 8px;
     }
 
@@ -27,10 +27,15 @@
 
         @include r(1200) {
             font-size: 34px;
+            margin-bottom: 0;
+        }
+        @include r(992) {
+            font-size: 30px;
+            padding: 10px 0 10px;
         }
 
         @include r(768) {
-            font-size: 32px;
+            font-size: 26px;
             margin-top: 0;
         }
 

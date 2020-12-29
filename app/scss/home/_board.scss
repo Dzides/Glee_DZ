@@ -7,6 +7,7 @@
     &__items {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         @include r(768) {
             display: block;
@@ -60,7 +61,7 @@
         &--right,
         &--center,
         &--left {
-            @include r(1400) {
+            @include r(1450) {
                 padding: 30px 50px 30px 100px;
 
                 svg {
@@ -76,7 +77,6 @@
                 }
             }
 
-
             @include r(992) {
                 padding: 20px 30px 20px 60px;
                 width: 33.3%;
@@ -90,7 +90,7 @@
                 border-bottom: 1px solid $mini-grey;
 
                 svg {
-                    top: 40px;
+                    top: 15px;
                     left: 10%;
                 }
             }
@@ -129,9 +129,9 @@
             max-width: 200px;
             margin-left: 20px;
 
-            @include r(768) {
-                max-width: 230px;
-            }
+            // @include r(768) {
+            //     max-width: 230px;
+            // }
 
             &::before {
                 top: 35px;
@@ -146,6 +146,7 @@
                     top: 54px;
                     left: -30px;
                 }
+               
             }
         }
 
@@ -192,6 +193,7 @@
         &--pay {
             @include r(768) {
                 margin-left: 20%;
+                max-width: 100%;
 
                 &::before {
                     @include r(768) {

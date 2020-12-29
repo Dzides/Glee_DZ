@@ -18,9 +18,9 @@ body {
     height: 39px;
     object-fit: cover;
 
-    @media (max-width: 576px) {
-        max-width: 116px;
-        height: 30px;
+    @include r(576) {
+        max-width: 90px;
+        height: 24px;
     }
 }
 

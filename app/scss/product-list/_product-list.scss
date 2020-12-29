@@ -1,8 +1,9 @@
 .product-list {
-    padding: 120px 0;
+    padding: 30px 0 120px;
 
     @include r(992) {
-        padding: 80px 0;
+        position: relative;
+        padding: 20px 0;
     }
 
     @include r(768) {
@@ -11,6 +12,51 @@
 
     @include r(576) {
         padding: 20px 0 40px;
+    }
+
+    &__button,
+    &__filter {
+        margin-left: 30px;
+        margin-bottom: 20px;
+
+        svg {
+            width: 21px;
+            height: 21px;
+            fill: $ml-blue;
+
+            @include hover-supported() {
+                fill: $ds-blue;
+            }
+        }
+
+        &--column {
+            svg {
+                width: 28px;
+                height: 21px;
+            }
+        }
+
+        &--active {
+            svg {
+                fill: $ds-blue;
+            }
+        }
+
+        &--filter {
+            display: none;
+
+            @include r(992) {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__filter {
+        display: none;
+
+        @include r(992) {
+            display: inline-block;
+        }
     }
 
     &__inner {
@@ -25,10 +71,15 @@
         max-width: 270px;
         width: 100%;
         color: $ds-blue;
+        transition: transform 1s;
 
         @include r(992) {
+            position: absolute;
             padding-left: 20px;
             width: 150%;
+            background-color: white;
+            z-index: 5;
+            transform: translateX(-200%);
         }
 
         @include r(576) {
@@ -36,6 +87,24 @@
             margin: 0 auto;
             max-width: 500px;
             width: 100%;
+        }
+
+        &--active {
+            @include r(992) {
+                margin-top: 40px;
+                padding: 0 30px;
+                max-width: 35%;
+                transform: translateX(0);
+            }
+
+            @include r(768) {
+                max-width: 55%;
+            }
+
+            @include r(576) {
+                max-width: 100%;
+            }
+
         }
     }
 
@@ -76,11 +145,12 @@
         flex-wrap: wrap;
         margin-bottom: 70px;
 
-        @include r(1200) {
-            justify-content: center;
+        @include r(992) {
+            margin-bottom: 0;
         }
 
         @include r(768) {
+            justify-content: space-around;
             margin-bottom: 30px;
         }
     }
@@ -88,9 +158,16 @@
     &__card {
         margin: 0 0 40px 30px;
 
+        @include r(1200) {
+            max-width: 29%;
+            min-height: 350px;
+        }
+
         @include r(768) {
             margin-bottom: 20px;
             margin-left: 20px;
+            max-width: 270px;
+            min-height: 250px;
         }
 
         @include r(576) {
@@ -99,7 +176,8 @@
         }
     }
 
-    &__info {
-        text-align: center;
+    .card-none {
+        display: none;
     }
+
 }

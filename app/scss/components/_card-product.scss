@@ -20,6 +20,10 @@
         align-items: center;
         justify-content: center;
 
+        @include r(768) {
+            height: 270px;
+        }
+
         &:hover {
             cursor: pointer;
 
@@ -30,9 +34,14 @@
     }
 
     &__img {
+        max-height: 230px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+
+        @include r(768) {
+            padding-bottom: 40px;
+        }
     }
 
     &__choice {
@@ -49,6 +58,7 @@
         @include r(768) {
             transform: translateY(0%);
             bottom: 30px;
+            left: 10px;
         }
     }
 
@@ -83,9 +93,6 @@
                 left: 10px;
             }
 
-            &:hover {
-                fill: white;
-            }
         }
 
         &--search {
@@ -127,12 +134,12 @@
             }
         }
 
-        &:hover {
+        &:hover{
             &:before {
                 background-color: $ml-blue;
             }
 
-            path {
+            svg {
                 fill: white;
             }
         }
@@ -141,6 +148,7 @@
     &__info {
         font-size: 16px;
         margin-top: auto;
+        text-align: center;
     }
 
     &__subtitle {
@@ -150,8 +158,22 @@
         @extend %minimal-text;
     }
 
+    &__star{
+        display: none;
+    }
+
     &__price {
         color: $ml-blue;
     }
 
+    &__icons{
+        display: none;
+    }
+
+    &__text,
+    &__btn{
+        display: none;
+    }
+
 }
+

@@ -152,7 +152,7 @@
         &:hover {
             background-color: $vl-orange;
             box-shadow: 2px 2px 2px 2px rgba(73, 66, 66, 0.05);
-            border: none;
+            border: 1px solid $vl-orange;
         }
     }
 

@@ -52,11 +52,17 @@ a {
     text-decoration: none;
     outline: 0;
     color: inherit;
+    &:focus{
+        outline: 1px solid rgba($ml-blue, 0.3);
+    }
 }
 
 input {
     border: none;
     outline: 0;
+    &:focus{
+        outline: 1px solid rgba($ml-blue, 0.3);
+    }
 }
 
 button {
@@ -66,9 +72,11 @@ button {
     background-color: transparent;
     outline: 0;
     cursor: pointer;
+    &:focus{
+        outline: 1px solid rgba($ml-blue, 0.3);
+    }
 }
 
 address {
     font-style: inherit;
 }
-  

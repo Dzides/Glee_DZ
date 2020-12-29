@@ -7,14 +7,14 @@
 
     @include r(768) {
         position: fixed;
-        padding: 20px 15px 15px;
+        padding: 10px 15px 10px;
         width: 100%;
         z-index: 10;
         background-color: white;
     }
 
     @include r(576) {
-        padding: 10px 15px 10px;
+        padding: 5px 5px 0 0;
     }
 
     &__inner {
@@ -24,15 +24,16 @@
     }
 
     &__btn {
+        font-size: 0;
         @include r(768) {
             display: block;
         }
 
         &--active {
-                   svg{
-                       fill: $ml-blue !important;
-                   }
-       }
+            svg {
+                fill: $ml-blue !important;
+            }
+        }
 
         svg {
             width: 50px;
@@ -48,37 +49,43 @@
     }
 
     &__search {
-        @include r(576) {
-            margin: 5px 5px 10px;
+        @include r(768) {
+            margin-left: 5px;
             display: flex;
             align-items: center;
             text-align: center;
+            justify-content: space-between;
         }
     }
 
     &__look {
-        position: relative;
-        width: 100%;
         font-size: 0;
+       
     }
 
     &__write {
-        padding: 5px 60px 5px 20px;
+        padding: 5px 30px 5px 10px;
+        min-width: 155px;
         width: 100%;
+        height: 28px;
         font-size: 14px;
         line-height: 1;
         box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
-        border-radius: 19px;
+        border-radius: 15px;
         color: $ds-blue;
+        @include r(576){
+            font-size: 10px;
+        }
     }
 
     &__enter {
-        position: absolute;
+        position: relative;
         width: 29px;
         height: 29px;
-        right: 20px;
+        right: 25px;
         border-radius: 50%;
         background-color: $vr-blue;
+        font-size: 0;
 
         &:hover {
             background-color: $ml-blue;
@@ -117,12 +124,8 @@
         background-color: $vr-blue;
     }
 
-    @include r(768) {
-        top: 100px;
-    }
-
     @include r(576) {
-        top: 95px;
+        top: 43px;
     }
 
     &__list {
@@ -194,11 +197,11 @@
             }
         }
 
-        &--bord{
-            @include r(768){
-                 border-top: 1px solid $ml-blue;
+        &--bord {
+            @include r(768) {
+                border-top: 1px solid $ml-blue;
             }
-           
+
         }
 
         &--focus {
@@ -215,25 +218,18 @@
     justify-content: space-between;
     align-items: center;
 
-    @include r(576) {
+    @include r(768) {
         display: none;
     }
 
     &__link {
         position: relative;
         font-size: 0;
-
-        &--search,
-        &--cubic,
-        &--heart,
-        &--cart {
-            fill: $md-blue;
-            transition: background-color 0.3s, color 0.3s, fill 0.3s;
-
-            &:hover {
-                svg {
-                    fill: white;
-                }
+        fill: $md-blue;
+        transition: background-color 0.3s, color 0.3s, fill 0.3s;
+        &:hover {
+            svg {
+                fill: white;
             }
         }
 
@@ -258,10 +254,6 @@
         &--search {
             margin-right: 21px;
 
-            @include r(768) {
-                margin-right: 0;
-            }
-
             svg {
                 top: 17px;
                 left: 17px;
@@ -272,10 +264,6 @@
         }
 
         &--cubic {
-            @include r(768) {
-                display: none;
-            }
-
             svg {
                 top: 15px;
                 left: 15px;
@@ -287,9 +275,7 @@
 
         &--heart,
         &--cart {
-            @include r(768) {
-                display: none;
-            }
+            padding: 16px;
 
             svg {
                 width: 19px;
@@ -299,22 +285,15 @@
         }
 
         &--heart {
-            @include r(576) {
-                display: none;
-            }
 
             &::after {
                 content: '';
                 position: absolute;
                 width: 1px;
                 height: 32px;
-                top: -8px;
-                right: -30px;
+                top: 10px;
+                right: -13px;
                 background-color: $light-orange;
-
-                @include r(576) {
-                    display: none;
-                }
             }
         }
 
@@ -331,15 +310,12 @@
         background-color: $vl-orange;
         border-radius: 25px;
 
-        @include r(768) {
-            display: none;
-        }
     }
 
     &__num {
         position: absolute;
-        top: -7px;
-        left: 11px;
+        top: 8px;
+        left: 28px;
         width: 16px;
         height: 16px;
         font-size: 12px;
@@ -354,7 +330,6 @@
 
 .panel-mobil {
     @include r(768) {
-        padding: 30px 0;
         align-items: center;
         display: flex;
         position: fixed;
@@ -362,59 +337,27 @@
         left: 0;
         bottom: -1px;
         justify-content: space-around;
-        height: 56px;
-        line-height: 56px;
-        background: #fff;
+       background-color: $vr-blue;
         box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
         z-index: 100;
 
         &__link {
             position: relative;
             font-size: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: $vr-blue;
+            fill: $md-blue;
+            transition: background-color 0.3s, color 0.3s, fill 0.3s;
 
-            &--search,
-            &--cubic,
-            &--heart,
-            &--cart,
-            &--home {
-                width: 51px;
-                height: 51px;
-                border-radius: 50%;
-                background-color: $vr-blue;
-                fill: $md-blue;
-                transition: background-color 0.3s, color 0.3s, fill 0.3s;
-
-                @include r(576) {
-                    background-color: transparent;
-                }
-
-                svg {
-                    position: absolute;
-                    fill: $ds-blue;
-                }
-
-                // &:hover {
-                //     background-color: $ml-blue;
-
-                //     @include r(576) {
-                //         .panel-mobil__num {
-                //             background-color: white;
-                //         }
-                //     }
-
-                //     svg {
-                //         fill: white;
-                //     }
-                // }
+            @include r(576) {
+                background-color: transparent;
             }
 
-            &--search {
-                svg {
-                    top: 17px;
-                    left: 17px;
-                    width: 19px;
-                    height: 16px;
-                }
+            svg {
+                position: absolute;
+                fill: $ds-blue;
             }
 
             &--cubic {

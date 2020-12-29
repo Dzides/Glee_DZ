@@ -131,6 +131,14 @@
         font-size: 36px;
         line-height: 38px;
 
+        @include r(576) {
+            width: 100%;
+            padding-left: 100px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba($bord-blue, 0.102);
+        }
+
         &+& {
             @include r(1200) {
                 margin-left: 10px;
@@ -217,14 +225,6 @@
                 width: 43px;
                 height: 42px;
             }
-        }
-
-        @include r(576) {
-            width: 100%;
-            padding-left: 100px;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba($bord-blue, 0.102);
         }
     }
 

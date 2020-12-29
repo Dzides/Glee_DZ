@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-
-    <div id="top"></div>
+<body id="top">
 
     <header class="header">
-        
-        <div class="wrapper">
+
+    <div class="wrapper">
+
+        <div class="header__inner">
+
+            <button class="header__btn" type="button">
+                <svg>
+                    <use xlink:href="images/sprite.svg#burger"></use>
+                </svg>
+            </button>
 
             <form class="header__search" action="#">
 
@@ -22,212 +28,480 @@
                     Search the site
                     <input class="header__write" name="search" type="text" placeholder="Search the site...">
                 </label>
-
+    
                 <button class="header__enter" type="button">
                     <svg>
-                        <use xlink:href="sprite.svg#search-header"></use>
+                        <use xlink:href="images/sprite.svg#search-header"></use>
                     </svg>
                 </button>
-
+    
             </form>
 
-            <div class="header__inner">
+            <a class="header__logo" href="#">
+                <img class="header__img logo" src="images/logo.png" alt="logotype">
+            </a>
 
-                <button class="header__btn" type="button">
+            <nav class="menu">
+
+                <ul class="menu__list">
+
+                    <li class="menu__item menu__link--bord">
+                        <a class="menu__link" href="index.html">Home +</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--active menu__link--focus">About</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Services</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link" href="product_list.html">Pages +</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">News</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="panel">
+
+                <button class="panel__link panel__link--search" type="button">search
                     <svg>
-                        <use xlink:href="sprite.svg#burger"></use>
+                        <use xlink:href="images/sprite.svg#search-header"></use>
                     </svg>
                 </button>
 
-                <a class="header__logo" href="#">
-                    <img class="header__img logo" src="images/logo.png" alt="logotype">
-                </a>
+                <div class="panel__shop">
 
-                <nav class="menu">
-
-                    <ul class="menu__list">
-
-                        <li class="menu__item menu__link--bord">
-                            <a class="menu__link" href="index.html">Home +</a>
-                        </li>
-
-                        <li class="menu__item">
-                            <span class="menu__link menu__link--active menu__link--focus">About</span>
-                        </li>
-
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Services</a>
-                        </li>
-
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Pages +</a>
-                        </li>
-
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">News</a>
-                        </li>
-
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Contact</a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-                <div class="panel">
-
-                    <button class="panel__link panel__link--search" type="button">search
+                    <a class="panel__link panel__link--heart" href="#">favourites
                         <svg>
-                            <use xlink:href="sprite.svg#search-header"></use>
+                            <use xlink:href="images/sprite.svg#heart-header"></use>
                         </svg>
-                    </button>
+                        <span class="panel__num">7</span>
+                    </a>
 
-                    <div class="panel__shop">
-
-                        <a class="panel__link panel__link--heart" href="#">favourites
-                            <svg>
-                                <use xlink:href="sprite.svg#heart-header"></use>
-                            </svg>
-                            <span class="panel__num">7</span>
-                        </a>
-
-                        <a class="panel__link panel__link--cart" href="#">basket
-                            <svg>
-                                <use xlink:href="sprite.svg#cart-header"></use>
-                            </svg>
-                            <span class="panel__num">10</span>
-                        </a>
-
-                    </div>
-
-                    <button class="panel__link panel__link--cubic" type="button">menu
+                    <a class="panel__link panel__link--cart" href="#">basket
                         <svg>
-                            <use xlink:href="sprite.svg#cubic-header"></use>
+                            <use xlink:href="images/sprite.svg#cart-header"></use>
                         </svg>
-                    </button>
+                        <span class="panel__num">10</span>
+                    </a>
 
                 </div>
 
-            </div>
-
-            <div class="panel-mobil">
-
-                <a class="panel-mobil__link panel-mobil__link--home" href="#top">home
+                <button class="panel__link panel__link--cubic" type="button">menu
                     <svg>
-                        <use xlink:href="sprite.svg#home"></use>
-                    </svg>
-                </a>
-
-                <a class="panel-mobil__link panel-mobil__link--heart" href="#">favourites
-                    <svg>
-                        <use xlink:href="sprite.svg#heart-header"></use>
-                    </svg>
-                    <span class="panel-mobil__num">7</span>
-                </a>
-
-                <a class="panel-mobil__link panel-mobil__link--cart" href="#">basket
-                    <svg>
-                        <use xlink:href="sprite.svg#cart-header"></use>
-                    </svg>
-                    <span class="panel-mobil__num">10</span>
-                </a>
-
-                <button class="panel-mobil__link panel-mobil__link--cubic" type="button">menu
-                    <svg>
-                        <use xlink:href="sprite.svg#cubic-header"></use>
+                        <use xlink:href="images/sprite.svg#cubic-header"></use>
                     </svg>
                 </button>
 
             </div>
 
         </div>
-    </header>
+
+        <div class="panel-mobil">
+
+            <a class="panel-mobil__link panel-mobil__link--home" href="#top">home
+                <svg>
+                    <use xlink:href="images/sprite.svg#home"></use>
+                </svg>
+            </a>
+
+            <a class="panel-mobil__link panel-mobil__link--heart" href="#">favourites
+                <svg>
+                    <use xlink:href="images/sprite.svg#heart-header"></use>
+                </svg>
+                <span class="panel-mobil__num">7</span>
+            </a>
+
+            <a class="panel-mobil__link panel-mobil__link--cart" href="#">basket
+                <svg>
+                    <use xlink:href="images/sprite.svg#cart-header"></use>
+                </svg>
+                <span class="panel-mobil__num">10</span>
+            </a>
+
+            <button class="panel-mobil__link panel-mobil__link--cubic" type="button">menu
+                <svg>
+                    <use xlink:href="images/sprite.svg#cubic-header"></use>
+                </svg>
+            </button>
+
+        </div>
+
+    </div>
+</header>
 
     <main class="main">
 
-        <section class="top">
-            <div class="container">
+        <div class="top">
+    <div class="container">
 
-                <h1 class="top__title">About Us</h1>
+        <h1 class="top__title">About Us</h1>
 
-                <div class="breadcrumbs">
+        <div class="breadcrumbs">
 
-                    <ul class="breadcrumbs__list">
+            <ul class="breadcrumbs__list">
 
-                        <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link" href="index.html">Home</a>
-                        </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="index.html">Home</a>
+                </li>
 
-                        <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link">About Us</a>
-                        </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link">About Us</a>
+                </li>
 
-                    </ul>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+        <section class="mission">
+    <div class="container">
+
+        <div class="mission__wrap">
+
+            <div class="mission__images" 
+            style="background-image: url(images/mission-bg.jpg);">
+            </div>
+
+            <div class="mission__content">
+
+                <div class="mission__lead">
+
+                    <span class="mission__num">12</span>
+
+                    <div class="mission__comment">
+                        <span>Years</span>
+                        <span>Experience</span>
+                        <span>Working</span>
+                    </div>
 
                 </div>
 
+                <h2 class="mission__title title">
+                    Mission of our creative house
+                </h2>
+
+                <div class="mission__text text">
+                    <p>
+                        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum
+                    </p>
+                </div>
+
+                <ul class="mission__board">
+
+                    <li class="mission__list  mission__list--note">
+                        <svg class=" mission__note">
+                            <use xlink:href="images/sprite.svg#note"></use>
+                        </svg>
+                        520+ <span>Projects</span>
+                    </li>
+
+                    <li class="mission__list mission__list--mega">
+                        <svg class=" mission__mega">
+                            <use xlink:href="images/sprite.svg#mega"></use>
+                        </svg>
+                        $4M <span>Revenue</span>
+                    </li>
+
+                    <li class="mission__list  mission__list--award">
+                        <svg class=" mission__award">
+                            <use xlink:href="images/sprite.svg#award"></use>
+                        </svg>
+                        250 <span>Awards</span>
+                    </li>
+
+                </ul>
+
             </div>
-        </section>
 
-        <section class="mission">
-            <div class="container">
+        </div>
 
-                <div class="mission__wrap">
+    </div>
+</section>
 
-                    <div class="mission__images" 
-                    style="background-image: url(images/mission-bg.jpg);">
+        <div class="advantages">
+    <div class="container">
+
+        <ul class="advantages__items">
+
+            <li class="advantages__item">
+
+                <svg>
+                    <use xlink:href="images/sprite.svg#rate"></use>
+                </svg>
+
+                <div class="advantages__info">
+
+                    <span class="advantages__title">99%</span>
+
+                    <span class="advantages__text">
+                        Satisﬁed Clients Rate
+                    </span>
+
+                </div>
+
+            </li>
+
+            <li class="advantages__item">
+
+                <svg>
+                    <use xlink:href="images/sprite.svg#deliv"></use>
+                </svg>
+
+                <div class="advantages__info">
+
+                    <span class="advantages__title">
+                        5020+
+                    </span>
+
+                    <span class="advantages__text">
+                        Products Delivered
+                    </span>
+
+                </div>
+
+            </li>
+
+            <li class="advantages__item">
+
+                <svg>
+                    <use xlink:href="images/sprite.svg#time"></use>
+                </svg>
+
+                <div class="advantages__info">
+
+                    <span class="advantages__title">
+                        23hr
+                    </span>
+
+                    <span class="advantages__text">
+                        Daily Working Time
+                    </span>
+
+                </div>
+
+            </li>
+
+            <li class="advantages__item">
+
+                <svg>
+                    <use xlink:href="images/sprite.svg#brand"></use>
+                </svg>
+
+                <div class="advantages__info">
+
+                    <span class="advantages__title">
+                        140+
+                    </span>
+
+                    <span class="advantages__text">
+                        Brands in Store
+                    </span>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+        <section class="team">
+    <div class="container">
+
+        <div class="team__wrap">
+
+            <div class="team__content">
+
+                <h2 class="team__title title">
+                    Our Team
+                </h2>
+
+                <div class="team__text text">
+                    <p>
+                        Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor
+                        inciLorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+
+                <a class="team__link" href="#">
+                    Join With US
+                    <svg>
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </a>
+
+            </div>
+
+            <div class="team__board">
+
+                <div class="team__person">
+
+                    <img src="images/mission/person-1.jpg" alt="Person foto">
+
+                    <div class="team__profile">
+
+                        <div class="team__info">
+
+                            <span class="team__name">Eliza Elliot</span>
+
+                            <span class="team__skill">Commodo tempor </span>
+
+                        </div>
+
+                        <ul class="team__social">
+
+                            <li class="team__list">
+                                <a class="team__icon team__icon--inst" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="team__list">
+                                <a class="team__icon team__icon--google" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#google+"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+
                     </div>
 
-                    <div class="mission__content">
+                </div>
 
-                        <div class="mission__lead">
+                <div class="team__person">
 
-                            <span class="mission__num">12</span>
+                    <img src="images/mission/person-2.jpg" alt="Person foto">
 
-                            <div class="mission__comment">
-                                <span>Years</span>
-                                <span>Experience</span>
-                                <span>Working</span>
-                            </div>
+                    <div class="team__profile">
+
+                        <div class="team__info">
+
+                            <span class="team__name">Roscoe A. </span>
+
+                            <span class="team__skill">Commodo tempor </span>
 
                         </div>
 
-                        <h2 class="mission__title title">
-                            Mission of our creative house
-                        </h2>
+                        <ul class="team__social">
 
-                        <div class="mission__text text">
-                            <p>
-                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip
-                                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum
-                            </p>
+                            <li class="team__list">
+                                <a class="team__icon team__icon--inst" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="team__list">
+                                <a class="team__icon team__icon--google" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#google+"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="team__person">
+
+                    <img src="images/mission/person-3.jpg" alt="Person foto">
+
+                    <div class="team__profile">
+
+                        <div class="team__info">
+
+                            <span class="team__name">Ruby M. </span>
+
+                            <span class="team__skill">Commodo tempor </span>
+
                         </div>
 
-                        <ul class="mission__board">
+                        <ul class="team__social">
 
-                            <li class="mission__list  mission__list--note">
-                                <svg class=" mission__note">
-                                    <use xlink:href="sprite.svg#note"></use>
-                                </svg>
-                                520+ <span>Projects</span>
+                            <li class="team__list">
+                                <a class="team__icon team__icon--inst" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
                             </li>
 
-                            <li class="mission__list mission__list--mega">
-                                <svg class=" mission__mega">
-                                    <use xlink:href="sprite.svg#mega"></use>
-                                </svg>
-                                $4M <span>Revenue</span>
+                            <li class="team__list">
+                                <a class="team__icon team__icon--google" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#google+"></use>
+                                    </svg>
+                                </a>
                             </li>
 
-                            <li class="mission__list  mission__list--award">
-                                <svg class=" mission__award">
-                                    <use xlink:href="sprite.svg#award"></use>
-                                </svg>
-                                250 <span>Awards</span>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="team__person">
+
+                    <img src="images/mission/person-4.jpg" alt="Person foto">
+
+                    <div class="team__profile">
+
+                        <div class="team__info">
+
+                            <span class="team__name">Marie F. Bloss</span>
+
+                            <span class="team__skill">Commodo tempor </span>
+
+                        </div>
+
+                        <ul class="team__social">
+
+                            <li class="team__list">
+                                <a class="team__icon team__icon--inst" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="team__list">
+                                <a class="team__icon team__icon--google" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#google+"></use>
+                                    </svg>
+                                </a>
                             </li>
 
                         </ul>
@@ -237,473 +511,197 @@
                 </div>
 
             </div>
-        </section>
 
-        <div class="advantages">
-            <div class="container">
-
-                <ul class="advantages__items">
-
-                    <li class="advantages__item">
-
-                        <svg>
-                            <use xlink:href="sprite.svg#rate"></use>
-                        </svg>
-
-                        <div class="advantages__info">
-
-                            <span class="advantages__title">99%</span>
-
-                            <p class="advantages__text">
-                                Satisﬁed Clients Rate
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="advantages__item">
-
-                        <svg>
-                            <use xlink:href="sprite.svg#deliv"></use>
-                        </svg>
-
-                        <div class="advantages__info">
-
-                            <span class="advantages__title">
-                                5020+
-                            </span>
-
-                            <p class="advantages__text">
-                                Products Delivered
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="advantages__item">
-
-                        <svg>
-                            <use xlink:href="sprite.svg#time"></use>
-                        </svg>
-
-                        <div class="advantages__info">
-
-                            <span class="advantages__title">
-                                23hr
-                            </span>
-
-                            <p class="advantages__text">
-                                Daily Working Time
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="advantages__item">
-
-                        <svg>
-                            <use xlink:href="sprite.svg#brand"></use>
-                        </svg>
-
-                        <div class="advantages__info">
-
-                            <span class="advantages__title">
-                                140+
-                            </span>
-
-                            <p class="advantages__text">
-                                Brands in Store
-                            </p>
-
-                        </div>
-
-                    </li>
-
-                </ul>
-
-            </div>
         </div>
 
-        <section class="team">
-            <div class="container">
-
-                <div class="team__wrap">
-
-                    <div class="team__content">
-
-                        <h2 class="team__title title">
-                            Our Team
-                        </h2>
-
-                        <div class="team__text text">
-                            <p>
-                                Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor
-                                inciLorem
-                                ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-
-                        <a class="team__link" href="#">
-                            Join With US
-                            <svg>
-                                <use xlink:href="sprite.svg#arrow-right"></use>
-                            </svg>
-                        </a>
-
-                    </div>
-
-                    <div class="team__board">
-
-                        <div class="team__person">
-
-                            <img src="images/mission/person-1.jpg" alt="Person foto">
-
-                            <div class="team__profile">
-
-                                <div class="team__info">
-
-                                    <span class="team__name">Eliza Elliot</span>
-
-                                    <span class="team__skill">Commodo tempor </span>
-
-                                </div>
-
-                                <ul class="team__social">
-
-                                    <li class="team__list">
-                                        <a class="team__icon team__icon--inst" href="#">
-                                            <svg>
-                                                <use xlink:href="sprite.svg#instagram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-
-                                    <li class="team__list">
-                                        <a class="team__icon team__icon--google" href="#">
-                                            <svg>
-                                                <use xlink:href="sprite.svg#google+"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                        <div class="team__person">
-
-                            <img src="images/mission/person-2.jpg" alt="Person foto">
-
-                            <div class="team__profile">
-
-                                <div class="team__info">
-
-                                    <span class="team__name">Roscoe A. </span>
-
-                                    <span class="team__skill">Commodo tempor </span>
-
-                                </div>
-
-                                <ul class="team__social">
-
-                                    <li class="team__list">
-                                        <a class="team__icon team__icon--inst" href="#">
-                                            <svg>
-                                                <use xlink:href="sprite.svg#instagram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-
-                                    <li class="team__list">
-                                        <a class="team__icon team__icon--google" href="#">
-                                            <svg>
-                                                <use xlink:href="sprite.svg#google+"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                        <div class="team__person">
-
-                            <img src="images/mission/person-3.jpg" alt="Person foto">
-
-                            <div class="team__profile">
-
-                                <div class="team__info">
-
-                                    <span class="team__name">Ruby M. </span>
-
-                                    <span class="team__skill">Commodo tempor </span>
-
-                                </div>
-
-                                <ul class="team__social">
-
-                                    <li class="team__list">
-                                        <a class="team__icon team__icon--inst" href="#">
-                                            <svg>
-                                                <use xlink:href="sprite.svg#instagram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-
-                                    <li class="team__list">
-                                        <a class="team__icon team__icon--google" href="#">
-                                            <svg>
-                                                <use xlink:href="sprite.svg#google+"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                        <div class="team__person">
-
-                            <img src="images/mission/person-4.jpg" alt="Person foto">
-
-                            <div class="team__profile">
-
-                                <div class="team__info">
-
-                                    <span class="team__name">Marie F. Bloss</span>
-
-                                    <span class="team__skill">Commodo tempor </span>
-
-                                </div>
-
-                                <ul class="team__social">
-
-                                    <li class="team__list">
-                                        <a class="team__icon team__icon--inst" href="#">
-                                            <svg>
-                                                <use xlink:href="sprite.svg#instagram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-
-                                    <li class="team__list">
-                                        <a class="team__icon team__icon--google" href="#">
-                                            <svg>
-                                                <use xlink:href="sprite.svg#google+"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
+    </div>
+</section>
 
         <section class="news">
-            <div class="container">
+    <div class="container">
 
-                <div class="news__top">
+        <div class="news__top">
 
-                    <h2 class="news__title title">
-                        Our Insights & Articles
-                    </h2>
+            <h2 class="news__title title">
+                Our Insights & Articles
+            </h2>
 
-                    <a class="news__link" href="#">View All
-                        <svg>
-                            <use xlink:href="sprite.svg#news-view"></use>
-                        </svg>
+            <a class="news__link" href="#">View All
+                <svg>
+                    <use xlink:href="images/sprite.svg#news-view"></use>
+                </svg>
+            </a>
+
+        </div>
+
+        <div class="news__items">
+
+            <article class="news-item">
+
+                <div class="news-item__hidden">
+                    <a href="#">
+                        <img class="news-item__images" src="images/news/1.jpg" alt="foto news">
                     </a>
+                </div>
+
+                <div class="news-item__inner">
+
+                    <div class="news-item__content">
+
+                        <span class="news-item__btn">
+                            News
+                        </span>
+
+                        <h3 class="news-item__text">
+                            <a href="">
+                                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam
+                            </a>
+                        </h3>
+
+                    </div>
+
+                    <div class="news-item__info">
+
+                        <span class="news-item__data">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#calendar"></use>
+                            </svg>
+                            <time datetime="2020-01-28">28 January, 2020</time>
+                        </span>
+
+                        <span class="news-item__author">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#admin"></use>
+                            </svg>
+                            <span>By Admin</span>
+                        </span>
+
+                    </div>
 
                 </div>
 
-                <div class="news__items">
+            </article>
 
-                    <article class="news__item">
+            <article class="news-item">
 
-                        <div class="news__hidden">
+                <div class="news-item__hidden">
+                    <a href="#">
+                        <img class="news-item__images" src="images/news/2.jpg" alt="foto news">
+                    </a>
+                </div>
+
+                <div class="news-item__inner">
+
+                    <div class="news-item__content">
+
+                        <span class="news-item__btn">
+                            News
+                        </span>
+
+                        <h3 class="news-item__text">
                             <a href="#">
-                                <img class="news__images" src="images/news/1.jpg" alt="foto news">
+                                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore
                             </a>
-                        </div>
+                        </h3>
 
-                        <div class="news__inner">
+                    </div>
 
-                            <div class="news__content">
+                    <div class="news-item__info">
 
-                                <span class="news__btn">
-                                    News
-                                </span>
+                        <span class="news-item__data">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#calendar"></use>
+                            </svg>
+                            <time datetime="2020-01-28">28 January, 2020</time>
+                        </span>
 
-                                <h3 class="news__text">
-                                    <a href="">
-                                        Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                        veniam
-                                    </a>
-                                </h3>
+                        <span class="news-item__author">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#admin"></use>
+                            </svg>
+                            <span>By Admin</span>
+                        </span>
 
-                            </div>
-
-                            <div class="news__info">
-
-                                <span class="news__data">
-                                    <svg>
-                                        <use xlink:href="sprite.svg#calendar"></use>
-                                    </svg>
-                                    <time datetime="2020-01-28">28 January, 2020</time>
-                                </span>
-
-                                <span class="news__author">
-                                    <svg>
-                                        <use xlink:href="sprite.svg#admin"></use>
-                                    </svg>
-                                    <span>By Admin</span>
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <article class="news__item">
-
-                        <div class="news__hidden">
-                            <a href="#">
-                                <img class="news__images" src="images/news/2.jpg" alt="foto news">
-                            </a>
-                        </div>
-
-                        <div class="news__inner">
-
-                            <div class="news__content">
-
-                                <span class="news__btn">
-                                    News
-                                </span>
-
-                                <h3 class="news__text">
-                                    <a href="#">
-                                        Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore
-                                    </a>
-                                </h3>
-
-                            </div>
-
-                            <div class="news__info">
-
-                                <span class="news__data">
-                                    <svg>
-                                        <use xlink:href="sprite.svg#calendar"></use>
-                                    </svg>
-                                    <time datetime="2020-01-28">28 January, 2020</time>
-                                </span>
-
-                                <span class="news__author">
-                                    <svg>
-                                        <use xlink:href="sprite.svg#admin"></use>
-                                    </svg>
-                                    <span>By Admin</span>
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <article class="news__item">
-
-                        <div class="news__hidden">
-                            <a href="#">
-                                <img class="news__images" src="images/news/3.jpg" alt="foto news">
-                            </a>
-                        </div>
-
-
-                        <div class="news__inner">
-
-                            <div class="news__content">
-
-                                <span class="news__btn">
-                                    News
-                                </span>
-
-                                <h3 class="news__text">
-                                    <a href="">
-                                        Rncididunt ut labore et dolore magna aliqua. Ut enim
-                                    </a>
-                                </h3>
-
-                            </div>
-
-                            <div class="news__info">
-
-                                <span class="news__data">
-                                    <svg>
-                                        <use xlink:href="sprite.svg#calendar"></use>
-                                    </svg>
-                                    <time datetime="2020-01-28">28 January, 2020</time>
-                                </span>
-
-                                <span class="news__author">
-                                    <svg>
-                                        <use xlink:href="sprite.svg#admin"></use>
-                                    </svg>
-                                    <span>By Admin</span>
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
+                    </div>
 
                 </div>
 
-            </div>
-        </section>
+            </article>
+
+            <article class="news-item">
+
+                <div class="news-item__hidden">
+                    <a href="#">
+                        <img class="news-item__images" src="images/news/3.jpg" alt="foto news">
+                    </a>
+                </div>
+
+
+                <div class="news-item__inner">
+
+                    <div class="news-item__content">
+
+                        <span class="news-item__btn">
+                            News
+                        </span>
+
+                        <h3 class="news-item__text">
+                            <a href="">
+                                Rncididunt ut labore et dolore magna aliqua. Ut enim
+                            </a>
+                        </h3>
+
+                    </div>
+
+                    <div class="news-item__info">
+
+                        <span class="news-item__data">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#calendar"></use>
+                            </svg>
+                            <time datetime="2020-01-28">28 January, 2020</time>
+                        </span>
+
+                        <span class="news-item__author">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#admin"></use>
+                            </svg>
+                            <span>By Admin</span>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
 
         <div class="partners">
-            <div class="container">
+    <div class="container">
 
-                <ul class="partners__list">
-                    <li class="partners__item"><img src="images/partners/1.png" alt="foto partner"></li>
-                    <li class="partners__item"><img src="images/partners/2.png" alt="foto partner"></li>
-                    <li class="partners__item"><img src="images/partners/3.png" alt="foto partner"></li>
-                    <li class="partners__item"><img src="images/partners/4.png" alt="foto partner"></li>
-                    <li class="partners__item"><img src="images/partners/5.png" alt="foto partner"></li>
-                </ul>
+        <ul class="partners__list">
+            <li class="partners__item"><img src="images/partners/1.png" alt="foto partner"></li>
+            <li class="partners__item"><img src="images/partners/2.png" alt="foto partner"></li>
+            <li class="partners__item"><img src="images/partners/3.png" alt="foto partner"></li>
+            <li class="partners__item"><img src="images/partners/4.png" alt="foto partner"></li>
+            <li class="partners__item"><img src="images/partners/5.png" alt="foto partner"></li>
+        </ul>
 
-            </div>
-        </div>
+    </div>
+</div>
 
     </main>
 
-    <footer class="footer">
+     <footer class="footer">
         <div class="container">
 
-            <div class="footer__top footer-about">
+            <div class="footer__top">
 
                 <div class="footer__column footer__column--first">
 
@@ -738,7 +736,7 @@
                     <ul class="footer__list">
 
                         <li class="footer__item">
-                            <a class="footer__link footer__link--active" href="about.html">
+                            <a class="footer__link footer__link--active" href="#">
                                 About Us
                             </a>
                         </li>
@@ -850,7 +848,7 @@
                         </li>
 
                         <li class="footer__item footer__item--bottom">
-                            <a href="#" class="footer__link footer__link--bottom footer__link--active">
+                            <a class="footer__link footer__link--bottom footer__link--active">
                                 About
                             </a>
                         </li>

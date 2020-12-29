@@ -10,6 +10,15 @@
             margin-left: 0;
         }
 
+        &--column {
+            justify-content: start;
+
+            @include r(992) {
+                justify-content: center;
+            }
+        }
+
+
     }
 
     &__item {
@@ -30,6 +39,21 @@
         color: $ds-blue;
         border: 1px solid $ml-blue;
 
+        @include r(992) {
+            min-width: 40px;
+            height: 40px;
+        }
+
+        @include r(768){
+            min-width: 35px;
+            height: 35px;
+            font-size: 14px;
+        }
+         @include r(576) {
+            min-width: 30px;
+            height: 30px;
+            font-size: 12px;
+         }
         @include hover-supported() {
             background-color: $ml-blue;
             color: white;

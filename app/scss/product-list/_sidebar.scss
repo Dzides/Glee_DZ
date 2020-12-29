@@ -44,9 +44,9 @@
 .sidebar-price {
     margin-bottom: 80px;
 
-    @include r(576) {
-        display: none;
-    }
+    // @include r(576) {
+    //     display: none;
+    // }
 
     &__title {
         margin-bottom: 30px;
@@ -109,9 +109,9 @@
 .sidebar-brand {
     margin-bottom: 50px;
 
-    @include r(576) {
-        display: none;
-    }
+    // @include r(576) {
+    //     display: none;
+    // }
 
     &__title {
         margin-bottom: 28px;

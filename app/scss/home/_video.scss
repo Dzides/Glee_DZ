@@ -25,6 +25,15 @@
         position: absolute;
         font-size: 0;
         z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         svg {
             width: 22px;
@@ -43,8 +52,9 @@
         &::before {
             width: 101px;
             height: 101px;
-            top: -37px;
-            left: -42px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: $ml-blue;
             z-index: -2;
         }
@@ -52,14 +62,15 @@
         &::after {
             width: 133px;
             height: 133px;
-            top: -53px;
-            left: -58px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: white;
             opacity: 0.4;
             z-index: -3;
         }
 
-        &:hover {
+        @include hover-supported() {
 
             &:before {
                 background-color: $vid-blue;
